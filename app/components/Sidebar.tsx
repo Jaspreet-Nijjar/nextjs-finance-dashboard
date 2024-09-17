@@ -7,7 +7,14 @@ const Sidebar = () => {
       {SIDEBAR_LINKS.map((link) => {
         const LinkIcon = link.icon;
 
-        return <Link href={link.route}>{link.label}</Link>;
+        return (
+          <ul>
+            <Link key={link.label} href={link.route}>
+              <LinkIcon />
+              {link.label}
+            </Link>
+          </ul>
+        );
       })}
     </nav>
   );

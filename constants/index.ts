@@ -23,7 +23,7 @@ export const SIDEBAR_LINKS = [
   },
 
   {
-    label: 'news',
+    label: 'News',
     route: '/news',
     icon: AiOutlineBulb,
   },
