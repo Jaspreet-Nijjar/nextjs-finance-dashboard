@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .sidebar {
-  @apply bg-white overflow-y-auto text-black h-screen flex flex-col border-r border-gray-200 pt-8 max-md:hidden sm:p-4 xl:p-6 2xl:w-[305px];
+  @apply text-gray-600 bg-pastelBlue h-screen flex flex-col gap-8 border-r border-gray-200 pt-8 max-md:hidden sm:p-4 xl:p-6 2xl:w-[305px];
 }

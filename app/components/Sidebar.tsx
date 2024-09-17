@@ -12,7 +12,7 @@ const Sidebar = () => {
             <Link
               key={link.label}
               href={link.route}
-              className="flex gap-4 items-center hover:text-orange-500 transition-all"
+              className="flex gap-4 items-center hover:font-bold transition-all"
             >
               <LinkIcon />
               {link.label}

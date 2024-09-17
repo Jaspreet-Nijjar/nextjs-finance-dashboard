@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Rubik } from 'next/font/google';
 import './globals.css';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
 
 const inter = Inter({ subsets: ['latin'] });
 
+const rubik = Rubik({ subsets: ['latin'] });
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex min-h-screen">
+      <body className={`flex min-h-screen ${rubik.className}`}>
         <Sidebar />
         <div className="flex-grow p-6">{children}</div>
         <Footer />
