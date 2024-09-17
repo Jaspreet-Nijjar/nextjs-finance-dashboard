@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sidebar {
+  @apply bg-white text-black sticky left-0 top-0 flex h-screen w-fit flex-col border-r border-gray-200 pt-8 max-md:hidden sm:p-4 xl:p-6 2xl:w-[305px];
+}
