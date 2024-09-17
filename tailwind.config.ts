@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        pastelBlue: 'hsl(210, 57%, 95%)',
+        sidebarBG: 'hsl(210, 57%, 97%)',
+        sidebarHoverBG: 'hsl(210, 57%, 93%)',
       },
     },
   },

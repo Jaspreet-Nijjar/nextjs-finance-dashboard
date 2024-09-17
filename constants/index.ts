@@ -17,7 +17,7 @@ export const SIDEBAR_LINKS = [
   },
 
   {
-    label: 'Transaction History',
+    label: 'Transactions',
     route: '/transactions',
     icon: BsPieChart,
   },
