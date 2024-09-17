@@ -31,8 +31,10 @@ const Sidebar = () => {
                 className="flex justify-between items-center hover:text-orange-500  transition-all w-full"
               >
                 <div
-                  className={`flex items-center space-x-2 p-4 ${
-                    pathname === link.route ? 'border-l  border-orange-500' : ''
+                  className={`flex items-center space-x-2 p-3 ${
+                    pathname === link.route
+                      ? 'border-l text-orange-500 border-orange-500'
+                      : ''
                   } `}
                 >
                   <LinkIcon />
