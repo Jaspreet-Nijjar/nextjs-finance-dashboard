@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Sidebar = () => {
   return (
-    <nav className="bg-black h-screen w-[20%] p-8 text-white flex flex-col text-xl gap-6">
+    <nav className="bg-black h-screen w-[20%] px-8 py-12 text-white flex flex-col text-lg gap-12">
       {SIDEBAR_LINKS.map((link) => {
         const LinkIcon = link.icon;
 
@@ -12,7 +12,7 @@ const Sidebar = () => {
             <Link
               key={link.label}
               href={link.route}
-              className="flex gap-4 items-center mt-8"
+              className="flex gap-4 items-center hover:text-orange-500 transition-all"
             >
               <LinkIcon />
               {link.label}
