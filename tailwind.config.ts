@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         sidebarBG: 'hsl(210, 57%, 97%)',
         sidebarHoverBG: 'hsl(210, 57%, 93%)',
+        bodyBG: '#F0F0F0',
       },
     },
   },

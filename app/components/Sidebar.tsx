@@ -12,7 +12,7 @@ const Sidebar = () => {
             <li key={link.label} className="w-full">
               <Link
                 href={link.route}
-                className="flex justify-between items-center hover:text-black hover:font-bold hover:bg-sidebarHoverBG hover:rounded-md  transition-all w-full"
+                className="flex justify-between items-center hover:text-orange-500 hover:rounded-md transition-all w-full"
               >
                 <div className="flex items-center space-x-2 p-4">
                   <LinkIcon />
