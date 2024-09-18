@@ -11,8 +11,8 @@ export const SIDEBAR_LINKS = [
   },
 
   {
-    label: 'Stocks',
-    route: '/stocks',
+    label: 'Crypto',
+    route: '/crypto',
     icon: BiMoneyWithdraw,
   },
 
