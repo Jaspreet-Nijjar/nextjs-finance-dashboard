@@ -17,4 +17,10 @@ describe('#Logo', () => {
     const linkElement = screen.getByRole('link');
     expect(linkElement).toHaveAttribute('href', '/');
   });
+
+  it('renders the subtitle Finance Manager', () => {
+    render(<Logo />);
+    const subtitle = screen.getByText('Finance Manager');
+    expect(subtitle).toBeInTheDocument();
+  });
 });
