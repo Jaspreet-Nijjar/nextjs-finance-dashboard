@@ -30,7 +30,7 @@ const TrendingCoins = async () => {
           </div>
 
           {trendingCoins.map((coin: any) => {
-            const { id, name, symbol, market_cap_rank, thumb } = coin.item;
+            const { id, name, symbol, price_btc, thumb } = coin.item;
 
             return (
               <div
@@ -43,7 +43,7 @@ const TrendingCoins = async () => {
                     {name} ({symbol})
                   </span>
                 </div>
-                <span>{market_cap_rank}</span>
+                <span>{price_btc}</span>
               </div>
             );
           })}
