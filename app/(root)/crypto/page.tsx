@@ -1,4 +1,4 @@
-import TrendingCoins from '@/app/components/crypto/TrendingCoins';
+import TrendingCoins from '@/app/components/crypto/TrendingCoins/TrendingCoins';
 
 const Crypto = () => {
   return (

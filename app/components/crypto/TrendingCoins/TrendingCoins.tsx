@@ -5,14 +5,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '../ui/card';
+} from '../../ui/card';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
 const TrendingCoins = async () => {
   const trendingCoinsData = await getTrendingCoins();
   const trendingCoins = trendingCoinsData.coins.slice(0, 3);
-  console.log(trendingCoins);
 
   return (
     <Card className={cn('w-fit')}>
@@ -30,7 +29,7 @@ const TrendingCoins = async () => {
           </div>
 
           {trendingCoins.map((coin: any) => {
-            const { id, name, symbol, price_btc, thumb } = coin.item;
+            const { id, name, symbol, thumb } = coin.item;
 
             return (
               <div
@@ -43,7 +42,12 @@ const TrendingCoins = async () => {
                     {name} ({symbol})
                   </span>
                 </div>
-                <span>{price_btc}</span>
+                <span>
+                  $
+                  {coin.item.data.price < 0.01
+                    ? coin.item.data.price.toFixed(6)
+                    : coin.item.data.price.toFixed(3)}
+                </span>
               </div>
             );
           })}
