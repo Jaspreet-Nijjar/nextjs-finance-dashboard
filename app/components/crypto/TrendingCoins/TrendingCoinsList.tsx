@@ -1,3 +1,4 @@
+import { CoinItem } from '@/types/crypto';
 import TrendingCoinItem from './TrendingCoinItem';
 
 const TrendingCoinsList = ({ coins }: any) => {
@@ -8,7 +9,7 @@ const TrendingCoinsList = ({ coins }: any) => {
         <span>Price</span>
       </div>
 
-      {coins.map((coin: any) => (
+      {coins.map((coin: CoinItem) => (
         <TrendingCoinItem key={coin.item.id} coin={coin} />
       ))}
     </div>
