@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from '../../ui/card';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
+import TrendingCoinsList from './TrendingCoinsList';
 
 const TrendingCoins = async () => {
   const trendingCoinsData = await getTrendingCoins();
@@ -22,36 +22,7 @@ const TrendingCoins = async () => {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-col">
-          <div className="flex justify-between text-orange-500 text-sm font-semibold border-b border-gray-300 pb-2 mb-2">
-            <span>Coin</span>
-            <span>Price</span>
-          </div>
-
-          {trendingCoins.map((coin: any) => {
-            const { id, name, symbol, thumb } = coin.item;
-
-            return (
-              <div
-                key={id}
-                className="flex justify-between items-center py-2 text-sm"
-              >
-                <div className="flex items-center">
-                  <Image src={thumb} alt={name} width={20} height={20} />
-                  <span className="ml-2">
-                    {name} ({symbol})
-                  </span>
-                </div>
-                <span>
-                  $
-                  {coin.item.data.price < 0.01
-                    ? coin.item.data.price.toFixed(6)
-                    : coin.item.data.price.toFixed(3)}
-                </span>
-              </div>
-            );
-          })}
-        </div>
+        <TrendingCoinsList coins={trendingCoins} />
       </CardContent>
     </Card>
   );
