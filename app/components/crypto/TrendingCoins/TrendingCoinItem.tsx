@@ -1,6 +1,7 @@
+import { CoinItem } from '@/types/crypto';
 import Image from 'next/image';
 
-const TrendingCoinItem = ({ coin }: any) => {
+const TrendingCoinItem = ({ coin }: { coin: CoinItem }) => {
   const { name, symbol, thumb } = coin.item;
   const { price } = coin.item.data;
 
