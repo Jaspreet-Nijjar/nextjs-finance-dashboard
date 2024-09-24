@@ -26,7 +26,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`flex min-h-screen bg-bodyBG ${rubik.className}`}>
         <Sidebar />
-        <div className="flex-grow p-6">{children}</div>
+
+        <div>{children}</div>
         <Footer />
       </body>
     </html>

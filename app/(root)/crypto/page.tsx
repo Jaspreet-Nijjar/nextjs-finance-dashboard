@@ -7,15 +7,13 @@ const Crypto = () => {
   return (
     <>
       <CoinStats />
-      <main className="flex flex-col gap-6 items-center md:flex-row mt-8">
-        <section className="flex flex-col gap-4">
+      <main className="flex flex-col items-center md:flex-row gap-6 p-6 mt-12">
+        <section className="flex flex-col gap-6 md:justify-around">
           <MarketCap />
           <TradingVolume />
         </section>
 
-        <section>
-          <TrendingCoins />
-        </section>
+        <TrendingCoins />
       </main>
     </>
   );
