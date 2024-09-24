@@ -7,7 +7,7 @@ const TradingVolume = async () => {
   const tradingVolume = totalVolume.usd;
 
   return (
-    <Card className={cn('w-full')}>
+    <Card className={cn('w-fit')}>
       <CardContent className={cn('py-6')}>
         <h1 className="text-xl font-bold text-left">
           ${formatNumber(tradingVolume)}

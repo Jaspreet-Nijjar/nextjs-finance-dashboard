@@ -4,13 +4,15 @@ import TrendingCoins from '@/app/components/crypto/TrendingCoins/TrendingCoins';
 
 const Crypto = () => {
   return (
-    <main className="flex gap-6">
-      <section className="flex flex-col gap-6">
+    <main className="flex flex-col gap-6 items-center md:flex-row">
+      <section className="flex flex-col gap-4">
         <MarketCap />
         <TradingVolume />
       </section>
 
-      <TrendingCoins />
+      <section>
+        <TrendingCoins />
+      </section>
     </main>
   );
 };
