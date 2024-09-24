@@ -16,7 +16,9 @@ const Indicators = ({ data, fontSize }: IndicatorProps) => {
       ) : (
         <>
           <IoMdArrowDropdown size={20} className="text-red-500" />
-          <p className="text-red-400">{Math.abs(data).toFixed(1)}%</p>
+          <p className="text-red-400 text-[13px]">
+            {Math.abs(data).toFixed(1)}%
+          </p>
         </>
       )}
     </div>

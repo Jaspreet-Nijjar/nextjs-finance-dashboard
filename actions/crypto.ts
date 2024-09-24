@@ -10,5 +10,6 @@ export async function getGlobalData() {
   return {
     totalVolume: data.data.total_volume,
     totalMarketCap: data.data.total_market_cap,
+    marketCapChange: data.data.market_cap_change_percentage_24h_usd,
   };
 }
