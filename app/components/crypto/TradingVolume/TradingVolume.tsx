@@ -1,14 +1,20 @@
 import { getTradingVolume } from '@/actions/crypto';
+import { Card, CardContent, CardFooter } from '../../ui/card';
+import { cn } from '@/lib/utils';
 
 const TradingVolume = async () => {
   const tradingVolumeData = await getTradingVolume();
   const tradingVolume = tradingVolumeData.usd;
 
   return (
-    <div className="mt-4 border p-4 border-gray-200 rounded w-72">
-      <h1 className="text-xl font-bold tracking-wide">${tradingVolume}</h1>
-      <p className="text-gray-500 text-md">24hr Trading Volume</p>
-    </div>
+    <Card className={cn('w-fit')}>
+      <CardContent>
+        <h1 className="text-xl font-bold text-left">${tradingVolume}</h1>
+      </CardContent>
+      <CardFooter>
+        <p className="text-gray-500 text-[15px]">24hr Trading Volume</p>
+      </CardFooter>
+    </Card>
   );
 };
 

@@ -6,13 +6,8 @@
   @apply text-gray-100 text-lg bg-black h-screen flex flex-col items-center gap-8 border-r border-gray-200 pt-8 max-md:hidden sm:p-4 xl:p-6 2xl:w-[305px];
 }
 
-h1 {
-  @apply text-3xl text-center;
-}
-
 @layer base {
   :root {
-
     --background: 0 0% 100%;
 
     --foreground: 0 0% 3.9%;
@@ -61,10 +56,9 @@ h1 {
 
     --chart-5: 27 87% 67%;
 
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
   .dark {
-
     --background: 0 0% 3.9%;
 
     --foreground: 0 0% 98%;
@@ -111,7 +105,7 @@ h1 {
 
     --chart-4: 280 65% 60%;
 
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
 
