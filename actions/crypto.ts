@@ -12,5 +12,6 @@ export async function getGlobalData() {
     totalMarketCap: data.data.total_market_cap,
     marketCapChange: data.data.market_cap_change_percentage_24h_usd,
     activeCrypto: data.data.active_cryptocurrencies,
+    markets: data.data.markets,
   };
 }
