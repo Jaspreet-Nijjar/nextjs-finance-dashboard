@@ -1,12 +1,17 @@
+import MarketCap from '@/app/components/crypto/MarketCap/MarketCap';
 import TradingVolume from '@/app/components/crypto/TradingVolume/TradingVolume';
 import TrendingCoins from '@/app/components/crypto/TrendingCoins/TrendingCoins';
 
 const Crypto = () => {
   return (
-    <div>
-      <TradingVolume />
+    <main className="flex">
+      <section className="flex flex-col">
+        <MarketCap />
+        <TradingVolume />
+      </section>
+
       <TrendingCoins />
-    </div>
+    </main>
   );
 };
 

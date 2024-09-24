@@ -4,8 +4,11 @@ export async function getTrendingCoins() {
   return res.json();
 }
 
-export async function getTradingVolume() {
+export async function getGlobalData() {
   const res = await fetch('https://api.coingecko.com/api/v3/global');
   const data = await res.json();
-  return data.data.total_volume;
+  return {
+    totalVolume: data.data.total_volume,
+    totalMarketCap: data.data.total_market_cap,
+  };
 }
