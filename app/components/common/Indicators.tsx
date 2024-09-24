@@ -11,12 +11,14 @@ const Indicators = ({ data, fontSize }: IndicatorProps) => {
       {data > 0 ? (
         <>
           <IoMdArrowDropup size={20} className="text-green-500" />
-          <p className="text-green-500">{Math.abs(data).toFixed(1)}%</p>
+          <p className="text-green-500 text-[11px]">
+            {Math.abs(data).toFixed(1)}%
+          </p>
         </>
       ) : (
         <>
           <IoMdArrowDropdown size={20} className="text-red-500" />
-          <p className="text-red-400 text-[13px]">
+          <p className="text-red-400 text-[11px]">
             {Math.abs(data).toFixed(1)}%
           </p>
         </>
