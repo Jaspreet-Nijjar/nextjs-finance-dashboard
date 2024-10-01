@@ -5,6 +5,7 @@ import { SiCoinmarketcap } from 'react-icons/si';
 import { FaBitcoin, FaEthereum } from 'react-icons/fa';
 import Indicators from './Indicators';
 import millify from 'millify';
+import MarketCapBar from './MarketCapBar';
 
 const CoinStats = async () => {
   const {
@@ -47,27 +48,13 @@ const CoinStats = async () => {
         <p className="text-orange-400">${millify(usdTotalVolume)}</p>
       </div>
 
-      <div className="hidden lg:flex items-center gap-2">
-        <FaBitcoin size="20" color="orange" />
-        <p>{marketCapBTC.toFixed(0)}%</p>
-        <div className="relative w-16 h-2 bg-gray-200 rounded">
-          <div
-            className="absolute left-0 top-0 h-full bg-orange-400 rounded"
-            style={{ width: `${marketCapBTC}%` }}
-          ></div>
-        </div>
-      </div>
+      <MarketCapBar icon={FaBitcoin} color="orange" percentage={marketCapBTC} />
 
-      <div className="hidden lg:flex items-center gap-2">
-        <FaEthereum size="20" color="#444971" />
-        <p>{marketCapETH.toFixed(0)}%</p>
-        <div className="relative w-16 h-2 bg-gray-200 rounded">
-          <div
-            className="absolute left-0 top-0 h-full bg-orange-400 rounded"
-            style={{ width: `${marketCapETH}%` }}
-          ></div>
-        </div>
-      </div>
+      <MarketCapBar
+        icon={FaEthereum}
+        color="#444971"
+        percentage={marketCapETH}
+      />
     </section>
   );
 };
