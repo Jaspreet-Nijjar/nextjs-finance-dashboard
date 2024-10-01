@@ -3,7 +3,7 @@ import { CiCoinInsert } from 'react-icons/ci';
 import { BsCurrencyExchange } from 'react-icons/bs';
 import { SiCoinmarketcap } from 'react-icons/si';
 import { FaBitcoin, FaEthereum } from 'react-icons/fa';
-import Indicators from '../../common/Indicators';
+import Indicators from './Indicators';
 import millify from 'millify';
 
 const CoinStats = async () => {

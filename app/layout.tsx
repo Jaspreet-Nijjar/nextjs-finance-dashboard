@@ -4,6 +4,7 @@ import { Rubik } from 'next/font/google';
 import './globals.css';
 import Footer from './components/common/Footer';
 import Sidebar from './components/common/Sidebar';
+import CoinStats from './components/common/CoinStats';
 
 export const metadata: Metadata = {
   title: {
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`flex min-h-screen bg-bodyBG ${rubik.className}`}>
+        <CoinStats />
         <Sidebar />
         <div>{children}</div>
         <Footer />
