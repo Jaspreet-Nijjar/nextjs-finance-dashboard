@@ -3,7 +3,7 @@ import { AiOutlineStock } from 'react-icons/ai';
 
 const Logo = () => {
   return (
-    <Link href="/" className="flex items-center gap-6">
+    <Link href="/" className="flex items-center gap-6 mt-8">
       <AiOutlineStock size={60} className="bg-orange-500 rounded-full p-2" />
       <div>
         <h1 className="mt-4 text-3xl text-center">

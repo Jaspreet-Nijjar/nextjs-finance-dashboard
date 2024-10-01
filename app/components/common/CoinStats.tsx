@@ -21,7 +21,7 @@ const CoinStats = async () => {
   const totalVolumeUSD = totalVolume.usd;
 
   return (
-    <section className="text-xs text-white bg-black p-4 flex gap-12 fixed top-0 w-screen ml-[-5px]">
+    <section className="text-xs text-white bg-black p-4 flex gap-12 fixed top-0 w-screen justify-center">
       <div className="flex gap-1 items-center">
         <CiCoinInsert size={20} />
         <p>Coins: </p>
