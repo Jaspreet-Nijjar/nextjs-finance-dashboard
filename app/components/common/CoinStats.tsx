@@ -17,8 +17,8 @@ const CoinStats = async () => {
     marketCapETH,
   } = await getGlobalData();
 
-  const marketCapUSD = totalMarketCap.usd;
-  const totalVolumeUSD = totalVolume.usd;
+  const usdMarketCap = totalMarketCap.usd;
+  const usdTotalVolume = totalVolume.usd;
 
   return (
     <section className="text-xs text-white bg-black p-4 flex gap-12 fixed top-0 w-screen justify-center">
@@ -37,14 +37,14 @@ const CoinStats = async () => {
       <div className="hidden md:flex gap-1 items-center">
         <SiCoinmarketcap size={15} />
         <p>Market Cap:</p>
-        <p className="text-orange-400 items-center">${millify(marketCapUSD)}</p>
+        <p className="text-orange-400 items-center">${millify(usdMarketCap)}</p>
 
         <Indicators data={marketCapChange} />
       </div>
 
       <div className="hidden md:flex gap-1 items-center">
         <p>24h Vol:</p>
-        <p className="text-orange-400">${millify(totalVolumeUSD)}</p>
+        <p className="text-orange-400">${millify(usdTotalVolume)}</p>
       </div>
 
       <div className="hidden lg:flex items-center gap-2">
