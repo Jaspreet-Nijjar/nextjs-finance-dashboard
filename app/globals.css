@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .sidebar {
-  @apply text-gray-100 text-lg bg-black h-screen flex flex-col items-center gap-8 border-r border-gray-200 pt-8 max-md:hidden sm:p-4 xl:p-6 2xl:w-[305px];
+  @apply text-gray-100 text-lg bg-black h-screen flex flex-col items-center gap-2 pt-8 p-4 md:w-[250px];
 }
 
 @layer base {
