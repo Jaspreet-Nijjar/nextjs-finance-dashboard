@@ -30,7 +30,9 @@ const Sidebar = () => {
                   } `}
                 >
                   <LinkIcon />
-                  <span>{link.label}</span>
+                  <span className="text-[15px] hidden md:block">
+                    {link.label}
+                  </span>
                 </div>
               </Link>
             </li>

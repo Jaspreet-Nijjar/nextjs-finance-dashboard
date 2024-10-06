@@ -1,6 +1,6 @@
-import MarketCap from '@/app/components/crypto/MarketCap/MarketCap';
-import TradingVolume from '@/app/components/crypto/TradingVolume/TradingVolume';
-import TrendingCoins from '@/app/components/crypto/TrendingCoins/TrendingCoins';
+import MarketCap from '@/app/components/markets/MarketCap/MarketCap';
+import TradingVolume from '@/app/components/markets/TradingVolume/TradingVolume';
+import TrendingCoins from '@/app/components/markets/TrendingCoins/TrendingCoins';
 
 const Markets = () => {
   return (
