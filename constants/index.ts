@@ -1,30 +1,30 @@
 import { FaHome } from 'react-icons/fa';
-import { BiMoneyWithdraw } from 'react-icons/bi';
-import { AiOutlineBulb } from 'react-icons/ai';
-import { BsPieChart } from 'react-icons/bs';
+import { VscGraphLine } from 'react-icons/vsc';
+import { HiOutlineArrowsUpDown } from 'react-icons/hi2';
+import { PiNewspaperLight } from 'react-icons/pi';
 
 export const SIDEBAR_LINKS = [
   {
-    label: 'Home',
+    label: 'Dashboard',
     route: '/',
     icon: FaHome,
   },
 
   {
-    label: 'Crypto',
-    route: '/crypto',
-    icon: BiMoneyWithdraw,
+    label: 'Markets',
+    route: '/markets',
+    icon: VscGraphLine,
   },
 
   {
     label: 'Transactions',
     route: '/transactions',
-    icon: BsPieChart,
+    icon: HiOutlineArrowsUpDown,
   },
 
   {
     label: 'News',
     route: '/news',
-    icon: AiOutlineBulb,
+    icon: PiNewspaperLight,
   },
 ];
