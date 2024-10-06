@@ -2,7 +2,7 @@ import MarketCap from '@/app/components/crypto/MarketCap/MarketCap';
 import TradingVolume from '@/app/components/crypto/TradingVolume/TradingVolume';
 import TrendingCoins from '@/app/components/crypto/TrendingCoins/TrendingCoins';
 
-const Crypto = () => {
+const Markets = () => {
   return (
     <>
       <main className="flex flex-col items-center md:flex-row gap-6 p-6 mt-12">
@@ -17,4 +17,4 @@ const Crypto = () => {
   );
 };
 
-export default Crypto;
+export default Markets;
