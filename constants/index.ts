@@ -1,6 +1,5 @@
 import { FaHome } from 'react-icons/fa';
 import { VscGraphLine } from 'react-icons/vsc';
-import { HiOutlineArrowsUpDown } from 'react-icons/hi2';
 import { PiNewspaperLight } from 'react-icons/pi';
 import { FaChartPie } from 'react-icons/fa';
 

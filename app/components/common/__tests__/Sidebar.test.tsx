@@ -16,7 +16,7 @@ describe('Sidebar', () => {
     render(<Sidebar />);
     expect(screen.getByText('Dashboard')).toBeInTheDocument();
     expect(screen.getByText('Markets')).toBeInTheDocument();
-    expect(screen.getByText('Transactions')).toBeInTheDocument();
+    expect(screen.getByText('Portfolio')).toBeInTheDocument();
     expect(screen.getByText('News')).toBeInTheDocument();
   });
 
@@ -31,9 +31,9 @@ describe('Sidebar', () => {
       '/markets'
     );
 
-    expect(screen.getByText('Transactions').closest('a')).toHaveAttribute(
+    expect(screen.getByText('Portfolio').closest('a')).toHaveAttribute(
       'href',
-      '/transactions'
+      '/portfolio'
     );
     expect(screen.getByText('News').closest('a')).toHaveAttribute(
       'href',
