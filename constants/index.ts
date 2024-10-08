@@ -2,6 +2,7 @@ import { FaHome } from 'react-icons/fa';
 import { VscGraphLine } from 'react-icons/vsc';
 import { HiOutlineArrowsUpDown } from 'react-icons/hi2';
 import { PiNewspaperLight } from 'react-icons/pi';
+import { FaChartPie } from 'react-icons/fa';
 
 export const SIDEBAR_LINKS = [
   {
@@ -17,9 +18,9 @@ export const SIDEBAR_LINKS = [
   },
 
   {
-    label: 'Transactions',
-    route: '/transactions',
-    icon: HiOutlineArrowsUpDown,
+    label: 'Portfolio',
+    route: '/portfolio',
+    icon: FaChartPie,
   },
 
   {
