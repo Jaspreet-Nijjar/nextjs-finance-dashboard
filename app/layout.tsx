@@ -8,8 +8,8 @@ import CoinStats from './components/common/CoinStats';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Finance Dashboard',
-    default: 'Home | Finance Dashboard',
+    template: '%s | Finance Dashboard',
+    default: 'Dashboard | Finance Dashboard',
   },
   description: 'Your personal finance dashboard',
 };

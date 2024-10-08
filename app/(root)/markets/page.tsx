@@ -2,6 +2,11 @@ import MarketCap from '@/app/components/markets/MarketCap/MarketCap';
 import TradingVolume from '@/app/components/markets/TradingVolume/TradingVolume';
 import TrendingCoins from '@/app/components/markets/TrendingCoins/TrendingCoins';
 
+export const metadata = {
+  title: 'Markets',
+  description: 'Explore financial market data',
+};
+
 const Markets = () => {
   return (
     <>
