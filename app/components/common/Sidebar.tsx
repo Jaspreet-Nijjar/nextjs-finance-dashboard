@@ -12,7 +12,7 @@ const Sidebar = () => {
     <nav className="sidebar p-4">
       <Logo />
 
-      <ul className="space-y-4 py-8">
+      <ul className="space-y-2 py-8">
         {SIDEBAR_LINKS.map((link) => {
           const LinkIcon = link.icon;
 
