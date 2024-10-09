@@ -21,7 +21,7 @@ const Markets = () => {
         </p>
 
         <section className="flex flex-col items-center lg:flex-row gap-6 p-6 w-full">
-          <div className="flex flex-col gap-6 md:flex-row lg:flex-col  lg:justify-between  items-center">
+          <div className="flex flex-col gap-6 md:flex-row lg:flex-col lg:justify-between  items-center">
             <MarketCap />
             <TradingVolume />
           </div>

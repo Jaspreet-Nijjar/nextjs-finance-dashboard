@@ -14,7 +14,7 @@ const TrendingCoins = async () => {
   const trendingCoins = trendingCoinsData.coins.slice(0, 3);
 
   return (
-    <Card className={cn('w-fit')}>
+    <Card className={cn('w-[90%] lg:w-fit')}>
       <CardHeader>
         <CardTitle className="text-center">Trending Coins</CardTitle>
         <CardDescription>
