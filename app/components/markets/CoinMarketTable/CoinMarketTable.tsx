@@ -7,20 +7,26 @@ import CoinList from './CoinList';
 
 const CoinMarketTable = () => {
   const [coins, setCoins] = useState<CoinProps[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const perPage = 20;
 
   useEffect(() => {
     const fetchCoins = async () => {
-      const data = await getCoinsMarketData();
+      const data = await getCoinsMarketData(currentPage, perPage);
       setCoins(data);
     };
 
     fetchCoins();
-  });
+  }, [currentPage]);
 
   return (
     <div className="mb-20">
       <CoinHeaders />
-      <CoinList coins={coins} />
+      <CoinList
+        coins={coins}
+        currentPage={currentPage}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };
