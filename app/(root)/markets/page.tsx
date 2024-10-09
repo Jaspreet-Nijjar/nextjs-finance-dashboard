@@ -1,3 +1,4 @@
+import CoinMarketTable from '@/app/components/markets/CoinMarketTable/CoinMarketTable';
 import MarketCap from '@/app/components/markets/MarketCap/MarketCap';
 import TradingVolume from '@/app/components/markets/TradingVolume/TradingVolume';
 import TrendingCoins from '@/app/components/markets/TrendingCoins/TrendingCoins';
@@ -27,6 +28,8 @@ const Markets = () => {
 
           <TrendingCoins />
         </section>
+
+        <CoinMarketTable />
       </main>
     </>
   );
