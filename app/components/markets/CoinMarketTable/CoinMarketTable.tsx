@@ -18,7 +18,7 @@ const CoinMarketTable = () => {
   });
 
   return (
-    <div>
+    <div className="mb-20">
       <CoinHeaders />
       <CoinList coins={coins} />
     </div>

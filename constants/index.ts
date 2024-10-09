@@ -44,13 +44,13 @@ export const COIN_HEADERS = [
 ];
 
 export const COIN_HEADERS_CLASSES = [
-  'hidden md:block text-center text-orange-400 font-bold',
-  'text-center text-orange-400 font-bold col-span-2',
+  'text-center text-orange-400 font-bold',
+  'text-center text-orange-400 font-bold',
   'text-center text-orange-400 font-bold',
   'hidden md:block text-center text-orange-400 font-bold',
   'hidden lg:block text-center text-orange-400 font-bold',
   'hidden lg:block text-center text-orange-400 font-bold',
-  'text-center text-orange-400 font-bold',
+  'hidden md:block text-center text-orange-400 font-bold',
   'hidden xl:block text-center text-orange-400 font-bold col-span-2',
   'hidden xl:block text-center text-orange-400 font-bold',
 ];
