@@ -19,12 +19,14 @@ const Markets = () => {
           highest market cap.
         </p>
 
-        <section className="flex flex-col gap-6 md:justify-around">
-          <MarketCap />
-          <TradingVolume />
-        </section>
+        <section className="flex flex-col items-center lg:flex-row gap-6 p-6 w-full">
+          <div className="flex flex-col gap-6 md:flex-row lg:flex-col  lg:justify-between  items-center">
+            <MarketCap />
+            <TradingVolume />
+          </div>
 
-        <TrendingCoins />
+          <TrendingCoins />
+        </section>
       </main>
     </>
   );
