@@ -17,3 +17,13 @@ export async function getGlobalData() {
     marketCapETH: data.data.market_cap_percentage.eth,
   };
 }
+
+export async function getCoinsMarketData(
+  page: number = 1,
+  perPage: number = 20
+) {
+  const res = await fetch(
+    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${perPage}&page=${page}&sparkline=true&price_change_percentage=1h%2C24h%2C7d&locale=en`
+  );
+  return res.json();
+}
