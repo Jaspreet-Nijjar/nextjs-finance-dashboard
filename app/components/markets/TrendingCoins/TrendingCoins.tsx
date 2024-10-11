@@ -1,4 +1,4 @@
-import { getTrendingCoins } from '@/actions/crypto';
+import { getTrendingData } from '@/actions/crypto';
 import {
   Card,
   CardContent,
@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 import TrendingCoinsList from './TrendingCoinsList';
 
 const TrendingCoins = async () => {
-  const trendingCoinsData = await getTrendingCoins();
+  const trendingCoinsData = await getTrendingData();
   const trendingCoins = trendingCoinsData.coins.slice(0, 3);
 
   return (

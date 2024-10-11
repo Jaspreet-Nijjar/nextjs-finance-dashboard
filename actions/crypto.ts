@@ -1,4 +1,4 @@
-export async function getTrendingCoins() {
+export async function getTrendingData() {
   const res = await fetch('https://api.coingecko.com/api/v3/search/trending');
 
   return res.json();
