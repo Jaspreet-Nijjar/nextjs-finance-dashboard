@@ -25,3 +25,17 @@ export type CoinProps = {
   circulating_supply: number;
   total_supply: number;
 };
+
+export type Category = {
+  category: {
+    name: string;
+    coins_count: number;
+    data: {
+      market_cap: number;
+    };
+  };
+};
+
+export type CategoryProps = {
+  categories: Category[];
+};

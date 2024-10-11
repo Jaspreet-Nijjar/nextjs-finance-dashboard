@@ -1,6 +1,7 @@
+import { Category } from '@/types/crypto';
 import millify from 'millify';
 
-const TrendingCategoryItem = ({ category }) => {
+const TrendingCategoryItem = ({ category }: Category) => {
   return (
     <div className="grid grid-cols-3 justify-between py-2 text-sm">
       <p>{category.name}</p>
