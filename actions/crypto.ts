@@ -27,3 +27,8 @@ export async function getCoinsMarketData(
   );
   return res.json();
 }
+
+export async function getSingleCoin(coinId: string) {
+  const res = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`);
+  return await res.json();
+}
