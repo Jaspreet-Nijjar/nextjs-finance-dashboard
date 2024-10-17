@@ -1,8 +1,9 @@
 import Indicators from '@/app/components/common/Indicators';
 import { formatNumber } from '@/lib/utils';
+import { CoinInfoProps } from '@/types/markets';
 import Image from 'next/image';
 
-const CoinInfo = ({ coin }) => {
+const CoinInfo = ({ coin }: CoinInfoProps) => {
   return (
     <section>
       <div className="flex items-center gap-2">
@@ -15,7 +16,7 @@ const CoinInfo = ({ coin }) => {
       </div>
 
       <div className="flex gap-2 mt-2">
-        <h1 className="text-3xl font-semibold">
+        <h1 className="text-4xl font-semibold">
           ${formatNumber(coin.current_price)}
         </h1>
         <Indicators data={coin.price_change_percentage_24h} fontSize="15px" />
