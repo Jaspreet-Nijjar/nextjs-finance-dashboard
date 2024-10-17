@@ -1,13 +1,14 @@
 import { getSingleCoin } from '@/actions/markets';
+import CoinInfo from './components/CoinInfo';
 
-const SingleCoinPage = async () => {
-  const coin = await getSingleCoin();
+const SingleCoin = async ({ params }: { params: { coinId: string } }) => {
+  const coin = await getSingleCoin(params.coinId);
 
   return (
-    <main className="flex flex-col p-4 mt-12 ml-[70px] md:ml-[250px]">
-      Page
-    </main>
+    <div className="flex flex-col p-4 mt-12 ml-[70px] md:ml-[250px]">
+      <CoinInfo coin={coin} />
+    </div>
   );
 };
 
-export default SingleCoinPage;
+export default SingleCoin;
