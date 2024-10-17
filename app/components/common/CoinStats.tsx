@@ -1,4 +1,4 @@
-import { getGlobalData } from '@/actions/crypto';
+import { getGlobalData } from '@/actions/markets';
 import { CiCoinInsert } from 'react-icons/ci';
 import { BsCurrencyExchange } from 'react-icons/bs';
 import { SiCoinmarketcap } from 'react-icons/si';

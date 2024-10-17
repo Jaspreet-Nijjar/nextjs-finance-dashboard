@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import CoinHeaders from './CoinHeaders';
 import { CoinProps } from '@/types/crypto';
-import { getCoinsMarketData } from '@/actions/crypto';
+import { getCoinsMarketData } from '@/actions/markets';
 import CoinList from './CoinList';
 
 const CoinMarketTable = () => {

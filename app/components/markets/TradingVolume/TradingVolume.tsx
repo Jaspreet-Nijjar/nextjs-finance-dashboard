@@ -1,4 +1,4 @@
-import { getGlobalData } from '@/actions/crypto';
+import { getGlobalData } from '@/actions/markets';
 import { Card, CardContent, CardFooter } from '../../ui/card';
 import { cn, formatNumber } from '@/lib/utils';
 

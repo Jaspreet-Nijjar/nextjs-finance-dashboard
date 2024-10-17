@@ -1,4 +1,4 @@
-import { getTrendingData } from '@/actions/crypto';
+import { getTrendingData } from '@/actions/markets';
 import {
   Card,
   CardContent,
