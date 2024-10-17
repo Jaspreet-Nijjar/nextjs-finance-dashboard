@@ -1,4 +1,4 @@
-import { CategoryProps } from '@/types/crypto';
+import { CategoryProps } from '@/types/markets';
 import TrendingCategoryItem from './TrendingCategoryItem';
 
 const TrendingCategoriesList = ({ categories }: CategoryProps) => {

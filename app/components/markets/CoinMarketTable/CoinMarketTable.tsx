@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import CoinHeaders from './CoinHeaders';
-import { CoinProps } from '@/types/crypto';
+import { CoinProps } from '@/types/markets';
 import { getCoinsMarketData } from '@/actions/markets';
 import CoinList from './CoinList';
 

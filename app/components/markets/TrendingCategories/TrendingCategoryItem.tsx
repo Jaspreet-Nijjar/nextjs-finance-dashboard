@@ -1,4 +1,4 @@
-import { Category } from '@/types/crypto';
+import { Category } from '@/types/markets';
 import millify from 'millify';
 
 const TrendingCategoryItem = ({ category }: Category) => {

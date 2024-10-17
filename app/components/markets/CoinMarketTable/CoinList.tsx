@@ -1,4 +1,4 @@
-import { CoinProps } from '@/types/crypto';
+import { CoinProps } from '@/types/markets';
 import CoinRow from './CoinRow';
 import Pagination from '../../common/Pagination';
 

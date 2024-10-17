@@ -1,4 +1,4 @@
-import { CoinItem } from '@/types/crypto';
+import { CoinItem } from '@/types/markets';
 import TrendingCoinItem from './TrendingCoinItem';
 
 const TrendingCoinsList = ({ coins }: any) => {

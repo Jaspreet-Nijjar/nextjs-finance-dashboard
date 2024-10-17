@@ -1,4 +1,4 @@
-import { CoinItem } from '@/types/crypto';
+import { CoinItem } from '@/types/markets';
 import Image from 'next/image';
 
 const TrendingCoinItem = ({ coin }: { coin: CoinItem }) => {
