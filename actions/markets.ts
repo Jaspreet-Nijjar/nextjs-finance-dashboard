@@ -32,3 +32,10 @@ export async function getSingleCoin(coinId: string) {
   const res = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`);
   return await res.json();
 }
+
+export async function getSingleCoinMarketData(coinId: string) {
+  const res = await fetch(
+    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinId}&sparkline=true&price_change_percentage=24h`
+  );
+  return await res.json();
+}
