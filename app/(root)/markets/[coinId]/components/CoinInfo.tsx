@@ -18,7 +18,7 @@ const CoinInfo = ({ coin }) => {
         <h1 className="text-3xl font-semibold">
           ${formatNumber(coin.current_price)}
         </h1>
-        <Indicators data={coin.price_change_percentage_24h} />
+        <Indicators data={coin.price_change_percentage_24h} fontSize="15px" />
       </div>
     </section>
   );
