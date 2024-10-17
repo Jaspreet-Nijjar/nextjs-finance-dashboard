@@ -11,6 +11,10 @@ const CoinInfo = ({ coin, marketData }) => {
         <div className="bg-gray-300 w-8 text-center rounded-xl text-xs">
           #{coin.market_cap_rank}
         </div>
+      </div>
+
+      <div>
+        <h1>{marketData.current_price}</h1>
         <Indicators data={marketData.price_change_percentage_24h} />
       </div>
     </section>
