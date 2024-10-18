@@ -1,4 +1,5 @@
-import { CiStar } from 'react-icons/ci';
+import { BsFillStarFill } from 'react-icons/bs';
+
 import {
   Tooltip,
   TooltipContent,
@@ -12,9 +13,10 @@ const WatchListButton = () => {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <CiStar
+            <BsFillStarFill
               size={15}
-              className="hover:text-orange-500 transition-all cursor-pointer"
+              color="orange"
+              className="hover:text-orange-500 transition-all"
             />
           </TooltipTrigger>
           <TooltipContent>
