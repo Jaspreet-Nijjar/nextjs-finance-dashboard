@@ -11,7 +11,7 @@ import { CoinLinksProps } from '@/types/markets';
 
 const CoinLinks = ({ coin }: CoinLinksProps) => {
   return (
-    <Card>
+    <Card className="mt-4 mb-4">
       <CardHeader>
         <CardTitle>Information</CardTitle>
       </CardHeader>
