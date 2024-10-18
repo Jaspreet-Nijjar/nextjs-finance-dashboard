@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import DOMPurify from 'isomorphic-dompurify';
 import { CoinDescriptionProps } from '@/types/markets';
+import { Button } from '@/components/ui/button';
 
 const CoinDescription = ({ coin }: CoinDescriptionProps) => {
   const [expandText, setExpandText] = useState(false);
@@ -29,9 +30,13 @@ const CoinDescription = ({ coin }: CoinDescriptionProps) => {
         }}
         className="text-sm"
       ></p>
-      <button onClick={handleToggle}>
+      <Button
+        onClick={handleToggle}
+        variant="secondary"
+        className="bg-orange-300 text-white hover:bg-orange-400 transition-all mt-2"
+      >
         {expandText ? 'Read Less' : 'Read More'}
-      </button>
+      </Button>
     </div>
   );
 };
