@@ -1,15 +1,8 @@
-import { CoinProps } from '@/types/crypto';
+import { CoinProps } from '@/types/markets';
 import { formatNumber } from '@/lib/utils';
 import Link from 'next/link';
 import Indicators from '../../common/Indicators';
 import millify from 'millify';
-import { CiStar } from 'react-icons/ci';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
 
 const CoinRow = ({ coin }: CoinProps) => {
   return (
