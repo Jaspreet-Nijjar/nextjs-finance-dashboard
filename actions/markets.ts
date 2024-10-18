@@ -28,10 +28,17 @@ export async function getCoinsMarketData(
   return res.json();
 }
 
+// export async function getSingleCoin(coinId: string) {
+//   const res = await fetch(
+//     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinId}&sparkline=true&price_change_percentage=24h`
+//   );
+//   const data = await res.json();
+//   return data[0];
+// }
+
 export async function getSingleCoin(coinId: string) {
   const res = await fetch(
-    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinId}&sparkline=true&price_change_percentage=24h`
+    `https://api.coingecko.com/api/v3/coins/${coinId}?tickers=true&market_data=true&community_data=true&sparkline=true`
   );
-  const data = await res.json();
-  return data[0];
+  return res.json();
 }

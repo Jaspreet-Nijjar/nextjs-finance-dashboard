@@ -43,12 +43,10 @@ export type CategoryProps = {
 };
 
 export type CoinInfoProps = {
-  coin: {
-    image: string;
-    name: string;
-    symbol: string;
-    market_cap_rank: number;
-    current_price: number;
-    price_change_percentage_24h: number;
-  };
+  image: string;
+  name: string;
+  symbol: string;
+  market_cap_rank: number;
+  current_price: number;
+  price_change_percentage_24h: number;
 };
