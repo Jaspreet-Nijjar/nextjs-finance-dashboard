@@ -11,14 +11,14 @@ import { CoinLinksProps } from '@/types/markets';
 
 const CoinLinks = ({ coin }: CoinLinksProps) => {
   return (
-    <Card className="mt-4 mb-4">
+    <Card className="mt-4 mb-4 w-fit p-4">
       <CardHeader>
         <CardTitle>Information</CardTitle>
       </CardHeader>
       <CardContent>
         <section className="text-[14px]">
-          <div className="flex justify-between mb-4">
-            <p className="text-gray-600">Website</p>
+          <div className="flex mb-4">
+            <p className="text-gray-600 mr-10">Website</p>
             <div className="flex gap-2">
               <Link
                 href={coin.links.homepage[0]}
