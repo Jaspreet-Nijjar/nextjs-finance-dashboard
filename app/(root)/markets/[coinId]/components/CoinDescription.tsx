@@ -19,7 +19,9 @@ const CoinDescription = ({ coin }: CoinDescriptionProps) => {
 
   return (
     <div>
-      <h1 className="border-b border-gray-300 text-xl">About {coin.name}</h1>
+      <h1 className="border-b border-gray-300 text-xl text-gray-600">
+        About {coin.name}
+      </h1>
 
       <p
         dangerouslySetInnerHTML={{

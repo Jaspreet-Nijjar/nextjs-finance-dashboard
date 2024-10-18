@@ -1,12 +1,13 @@
 import Indicators from '@/app/components/common/Indicators';
 import WatchListButton from '@/app/components/common/WatchListButton';
+import { Button } from '@/components/ui/button';
 import { formatNumber } from '@/lib/utils';
 import { CoinInfoProps } from '@/types/markets';
 import Image from 'next/image';
 
 const CoinInfo = ({ coin }: CoinInfoProps) => {
   return (
-    <section>
+    <section className="mb-8">
       <div className="flex items-center gap-2">
         <Image src={coin.image.large} alt={coin.name} width={50} height={100} />
         <h3 className="font-bold text-[22px]">{coin.name}</h3>
@@ -26,6 +27,10 @@ const CoinInfo = ({ coin }: CoinInfoProps) => {
           fontSize="15px"
         />
       </div>
+
+      <Button variant="secondary" className="bg-gray-300 mt-4">
+        Add To Portfolio
+      </Button>
     </section>
   );
 };
