@@ -7,8 +7,9 @@ import {
 } from '../../../../components/ui/card';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaReddit } from 'react-icons/fa';
+import { CoinLinksProps } from '@/types/markets';
 
-const CoinLinks = ({ coin }) => {
+const CoinLinks = ({ coin }: CoinLinksProps) => {
   return (
     <Card>
       <CardHeader>

@@ -58,3 +58,14 @@ export type CoinInfoProps = {
     };
   };
 };
+
+export type CoinLinksProps = {
+  coin: {
+    links: {
+      homepage: string;
+      whitepaper: string;
+      official_forum_url: string;
+    };
+    id: string;
+  };
+};
