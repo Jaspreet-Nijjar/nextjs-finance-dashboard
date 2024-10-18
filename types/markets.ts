@@ -69,3 +69,12 @@ export type CoinLinksProps = {
     id: string;
   };
 };
+
+export type CoinDescriptionProps = {
+  coin: {
+    name: string;
+    description: {
+      en: string;
+    };
+  };
+};

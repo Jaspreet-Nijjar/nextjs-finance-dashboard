@@ -1,8 +1,9 @@
 'use client';
 import { useState } from 'react';
 import DOMPurify from 'isomorphic-dompurify';
+import { CoinDescriptionProps } from '@/types/markets';
 
-const CoinDescription = ({ coin }) => {
+const CoinDescription = ({ coin }: CoinDescriptionProps) => {
   const [expandText, setExpandText] = useState(false);
 
   const handleToggle = () => {
