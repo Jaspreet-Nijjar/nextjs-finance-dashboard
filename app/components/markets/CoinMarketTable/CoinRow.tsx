@@ -17,23 +17,7 @@ const CoinRow = ({ coin }: CoinProps) => {
       className="text-xs grid grid-cols-3 md:grid-cols-5 lg:grid-cols-11 items-center p-4 border-b border-gray-200"
       key={coin.id}
     >
-      <div className="flex gap-4 justify-center">
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <CiStar
-                size={15}
-                className="hover:text-orange-500 transition-all cursor-pointer"
-              />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Add to Watchlist</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <div className="text-center">{coin.market_cap_rank}</div>
-      </div>
+      <div className="text-center">{coin.market_cap_rank}</div>
 
       <div className="flex items-center justify-center">
         <img src={coin.image} alt="image of coin" width={30} className="mr-2" />
