@@ -4,8 +4,9 @@ import { cn, formatNumber } from '@/lib/utils';
 import WatchListButton from '@/app/components/common/WatchListButton';
 import Indicators from '@/app/components/common/Indicators';
 import millify from 'millify';
+import { PopularCoinProps } from '@/types/markets';
 
-const PopularCoinCard = ({ coin }) => {
+const PopularCoinCard = ({ coin }: PopularCoinProps) => {
   return (
     <Card className={cn('w-[240px] p-2')}>
       <CardContent>
