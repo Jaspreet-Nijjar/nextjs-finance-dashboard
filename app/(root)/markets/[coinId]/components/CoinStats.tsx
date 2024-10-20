@@ -7,16 +7,19 @@ const CoinStats = ({ coin }) => {
     <section>
       <CoinStatsCard
         title="Market Cap"
-        data={millify(coin.market_data.market_cap.usd)}
+        data={coin.market_data.market_cap.usd}
+        currency={true}
       />
       <CoinStatsCard
         title="Total Volume"
-        data={millify(coin.market_data.total_volume.usd)}
+        data={coin.market_data.total_volume.usd}
+        currency={true}
       />
 
       <CoinStatsCard
         title="Fully Diluted Validation"
-        data={millify(coin.market_data.fully_diluted_valuation.usd)}
+        data={coin.market_data.fully_diluted_valuation.usd}
+        currency={true}
       />
       <CoinStatsCard
         title="Circulating Supply"
