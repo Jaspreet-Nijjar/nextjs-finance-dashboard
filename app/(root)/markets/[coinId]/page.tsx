@@ -5,6 +5,7 @@ import CoinLinks from './components/CoinLinks';
 import CoinDescription from './components/CoinDescription';
 import PopularCoins from './components/PopularCoins';
 import TrendingCategories from '@/app/components/markets/TrendingCategories/TrendingCategories';
+import CoinStats from './components/CoinStats';
 
 export async function generateMetadata({
   params,
@@ -29,6 +30,7 @@ const SingleCoin = async ({ params }: { params: { coinId: string } }) => {
       <CoinInfo coin={coin} />
       <CoinDescription coin={coin} />
       <CoinLinks coin={coin} />
+      <CoinStats />
       <TrendingCoins />
       <TrendingCategories />
       <PopularCoins coins={coins} />
