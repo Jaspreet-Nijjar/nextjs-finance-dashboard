@@ -16,9 +16,12 @@ const Markets = () => {
         <h1 className="font-semibold text-sm md:text-2xl text-gray-900">
           Current Cryptocurrency Market Prices
         </h1>
-        <p className="text-sm text-gray-600 md:text-left md:text-[15px]">
-          Discover all global cryptocurrencies available, highlighted from the
-          highest market cap.
+        <p className="text-sm text-gray-600 md:text-left md:text-[14px]">
+          Discover all global cryptocurrencies available, ranked and highlighted
+          by market capitalisation, price changes and key financial data. Stay
+          updated with the latest trends, performance insights and explore each
+          coin to get further financial insight. Explore real-time prices, track
+          your favourite assets by adding coins to your watchlist.
         </p>
 
         <section className="flex flex-col items-center lg:flex-row gap-6 p-6 w-full">
