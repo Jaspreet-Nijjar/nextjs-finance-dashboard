@@ -28,7 +28,10 @@ const CoinInfo = ({ coin }: CoinInfoProps) => {
         />
       </div>
 
-      <Button variant="secondary" className="bg-gray-300 mt-4">
+      <Button
+        variant="secondary"
+        className="bg-gray-400 mt-4 hover:bg-black text-white transition-all"
+      >
         Add To Portfolio
       </Button>
     </section>
