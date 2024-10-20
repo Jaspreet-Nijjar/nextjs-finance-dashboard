@@ -6,7 +6,7 @@ import Indicators from '@/app/components/common/Indicators';
 import millify from 'millify';
 import { PopularCoinProps } from '@/types/markets';
 
-const PopularCoinCard = ({ coin }: PopularCoinProps) => {
+const PopularCoinCard = ({ coin }: { coin: PopularCoinProps }) => {
   return (
     <Card className={cn('w-[240px] p-2')}>
       <CardContent>

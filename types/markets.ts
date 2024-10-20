@@ -80,13 +80,11 @@ export type CoinDescriptionProps = {
 };
 
 export type PopularCoinProps = {
-  coin: {
-    id: string;
-    current_price: number;
-    price_change_percentage_24h: number;
-    market_cap: number;
-    market_cap_change_percentage_24h: number;
-    image: string;
-    name: string;
-  };
+  id: string;
+  current_price: number;
+  price_change_percentage_24h: number;
+  market_cap: number;
+  market_cap_change_percentage_24h: number;
+  image: string;
+  name: string;
 };
