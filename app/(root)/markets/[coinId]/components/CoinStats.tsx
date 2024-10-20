@@ -1,8 +1,8 @@
-import millify from 'millify';
+import { CoinStatsProps } from '@/types/markets';
 import CoinStatsCard from './CoinStatsCard';
 import { formatNumber } from '@/lib/utils';
 
-const CoinStats = ({ coin }) => {
+const CoinStats = ({ coin }: { coin: CoinStatsProps }) => {
   return (
     <section>
       <CoinStatsCard

@@ -88,3 +88,20 @@ export type PopularCoinProps = {
   image: string;
   name: string;
 };
+
+export type CoinStatsProps = {
+  market_data: {
+    circulating_supply: number;
+    total_supply: number;
+    max_supply: number;
+    market_cap: {
+      usd: number;
+    };
+    total_volume: {
+      usd: number;
+    };
+    fully_diluted_valuation: {
+      usd: number;
+    };
+  };
+};
