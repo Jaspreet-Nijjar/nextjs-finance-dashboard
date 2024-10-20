@@ -30,7 +30,7 @@ const SingleCoin = async ({ params }: { params: { coinId: string } }) => {
       <CoinInfo coin={coin} />
       <CoinDescription coin={coin} />
       <CoinLinks coin={coin} />
-      <CoinStats />
+      <CoinStats coin={coin} />
       <TrendingCoins />
       <TrendingCategories />
       <PopularCoins coins={coins} />
