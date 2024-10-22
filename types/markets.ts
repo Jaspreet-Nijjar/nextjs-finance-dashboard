@@ -105,3 +105,14 @@ export type CoinStatsProps = {
     };
   };
 };
+
+export type CoinPerformanceProps = {
+  name: string;
+  market_data: {
+    price_change_percentage_24h: number;
+    price_change_percentage_7d: number;
+    price_change_percentage_14d: number;
+    price_change_percentage_30d: number;
+    price_change_percentage_1y: number;
+  };
+};

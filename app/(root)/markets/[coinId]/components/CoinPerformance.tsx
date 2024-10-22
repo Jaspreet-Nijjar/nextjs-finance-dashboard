@@ -1,6 +1,7 @@
 import Indicators from '@/app/components/common/Indicators';
+import { CoinPerformanceProps } from '@/types/markets';
 
-const CoinPerformance = ({ coin }) => {
+const CoinPerformance = ({ coin }: { coin: CoinPerformanceProps }) => {
   return (
     <section>
       <h1 className="border-b border-gray-300 mb-2 text-xl text-gray-600">
