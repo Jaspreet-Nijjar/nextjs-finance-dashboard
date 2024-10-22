@@ -7,11 +7,15 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import useWatchlistStore from '@/store/watchlistStore';
 
-const WatchListButton = () => {
+const WatchListButton = ({ coin }: any) => {
+  const addToWatchlist = useWatchlistStore((state) => state.addToWatchlist);
+
   const [addToWatchList, setAddToWatchList] = useState(false);
 
   const handleClick = () => {
+    addToWatchlist(coin);
     setAddToWatchList(!addToWatchList);
   };
 

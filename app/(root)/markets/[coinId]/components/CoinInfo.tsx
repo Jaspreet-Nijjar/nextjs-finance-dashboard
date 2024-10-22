@@ -15,7 +15,7 @@ const CoinInfo = ({ coin }: CoinInfoProps) => {
         <div className="bg-gray-300 w-8 text-center rounded-xl text-xs">
           #{coin.market_cap_rank}
         </div>
-        <WatchListButton />
+        <WatchListButton coin={coin} />
       </div>
 
       <div className="flex gap-2 mt-2">
