@@ -2,7 +2,17 @@ import millify from 'millify';
 import { Card, CardContent } from '../../../../components/ui/card';
 import { cn } from '@/lib/utils';
 
-const CoinStatsCard = ({ title, currency = false, data }: any) => {
+export type CoinStatsCardProps = {
+  title: string;
+  currency: boolean;
+  data: number;
+};
+
+const CoinStatsCard = ({
+  title,
+  currency = false,
+  data,
+}: CoinStatsCardProps) => {
   return (
     <div>
       <Card className={cn('w-[180px]')}>
