@@ -1,5 +1,4 @@
 'use client';
-import { useState } from 'react';
 import useWatchlistStore from '@/store/watchlistStore';
 import Image from 'next/image';
 import {
@@ -43,7 +42,7 @@ const Watchlist = () => {
       <CardContent>
         <div>
           {!hasCoinsInWatchlist && (
-            <p className="text-[14px]  text-gray-600 mb-4 max-w-md mt-[-20px]">
+            <p className="text-[14px]  text-gray-600 mb-4 max-w-xs mt-[-20px]">
               You currently do not have any coins added to your watchlist. View
               all coins below.
             </p>
