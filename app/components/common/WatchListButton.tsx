@@ -10,13 +10,27 @@ import {
 import useWatchlistStore from '@/store/watchlistStore';
 
 const WatchListButton = ({ coin }: any) => {
+  const watchlist = useWatchlistStore((state) => state.watchlist);
   const addToWatchlist = useWatchlistStore((state) => state.addToWatchlist);
+  const removeFromWatchlist = useWatchlistStore(
+    (state) => state.removeFromWatchlist
+  );
 
-  const [addToWatchList, setAddToWatchList] = useState(false);
+  if (!coin || !coin.id) {
+    return null;
+  }
+
+  const coinInWatchlist = watchlist.some((item) => item.id === coin.id);
+
+  const [isInWatchlist, setIsInWatchlist] = useState(coinInWatchlist);
 
   const handleClick = () => {
-    addToWatchlist(coin);
-    setAddToWatchList(!addToWatchList);
+    if (isInWatchlist) {
+      removeFromWatchlist(coin.id);
+    } else {
+      addToWatchlist(coin);
+    }
+    setIsInWatchlist(!isInWatchlist);
   };
 
   return (
@@ -26,13 +40,13 @@ const WatchListButton = ({ coin }: any) => {
           <button onClick={handleClick}>
             <BsFillStarFill
               size={15}
-              color={addToWatchList ? 'orange' : 'black'}
+              color={isInWatchlist ? 'orange' : 'black'}
             />
           </button>
         </TooltipTrigger>
 
         <TooltipContent>
-          <p>{addToWatchList ? 'Remove from Watchlist' : 'Add to Watchlist'}</p>
+          <p>{isInWatchlist ? 'Remove from Watchlist' : 'Add to Watchlist'}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

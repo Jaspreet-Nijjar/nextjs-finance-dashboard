@@ -43,19 +43,18 @@ export type CategoryProps = {
 };
 
 export type CoinInfoProps = {
-  coin: {
-    image: {
-      large: string;
+  image: {
+    large: string;
+  };
+  id: string;
+  name: string;
+  symbol: string;
+  market_cap_rank: number;
+  market_data: {
+    current_price: {
+      usd: number;
     };
-    name: string;
-    symbol: string;
-    market_cap_rank: number;
-    market_data: {
-      current_price: {
-        usd: number;
-      };
-      price_change_percentage_24h: number;
-    };
+    price_change_percentage_24h: number;
   };
 };
 

@@ -1,5 +1,5 @@
 'use client';
-
+import { useState } from 'react';
 import useWatchlistStore from '@/store/watchlistStore';
 import Image from 'next/image';
 import {
@@ -25,34 +25,39 @@ const Watchlist = () => {
     removeFromWatchlist(coinId);
   };
 
+  const hasCoinsInWatchlist = watchlist.length > 0;
+
   return (
     <Card>
       <CardHeader>
         <CardTitle>Watchlist</CardTitle>
         <CardDescription>
-          <div>
+          {hasCoinsInWatchlist && (
             <p className="mb-2">
               View the list of coins in your current watchlist. You can find all
               coins below.
             </p>
-            <Link
-              href="/markets"
-              className="border border-gray-300 rounded px-2 py-1 bg-black text-white hover:text-orange-500 transition-all"
-            >
-              View Coins
-            </Link>
-          </div>
+          )}
         </CardDescription>
       </CardHeader>
       <CardContent>
         <div>
-          <div className="grid grid-cols-6 gap-10 items-center">
-            {WATCHLIST_HEADERS.map((header) => (
-              <p className="text-[14px]  text-gray-600 mb-2 font-bold">
-                {header}
-              </p>
-            ))}
-          </div>
+          {!hasCoinsInWatchlist && (
+            <p className="text-[14px]  text-gray-600 mb-4 max-w-md mt-[-20px]">
+              You currently do not have any coins added to your watchlist. View
+              all coins below.
+            </p>
+          )}
+
+          {hasCoinsInWatchlist && (
+            <div className="grid grid-cols-6 gap-10 items-center">
+              {WATCHLIST_HEADERS.map((header) => (
+                <p className="text-[14px]  text-gray-600 mb-2 font-bold">
+                  {header}
+                </p>
+              ))}
+            </div>
+          )}
 
           <ul>
             {watchlist.map((coin) => (
@@ -127,6 +132,12 @@ const Watchlist = () => {
               </li>
             ))}
           </ul>
+          <Link
+            href="/markets"
+            className="border border-gray-300 rounded px-2 py-0.5 text-sm bg-black text-white hover:text-orange-500 transition-all"
+          >
+            View Coins
+          </Link>
         </div>
       </CardContent>
     </Card>

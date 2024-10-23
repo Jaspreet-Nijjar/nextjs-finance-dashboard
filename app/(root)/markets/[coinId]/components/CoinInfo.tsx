@@ -5,7 +5,7 @@ import { formatNumber } from '@/lib/utils';
 import { CoinInfoProps } from '@/types/markets';
 import Image from 'next/image';
 
-const CoinInfo = ({ coin }: CoinInfoProps) => {
+const CoinInfo = ({ coin }: { coin: CoinInfoProps }) => {
   return (
     <section className="mb-8">
       <div className="flex items-center gap-2">
