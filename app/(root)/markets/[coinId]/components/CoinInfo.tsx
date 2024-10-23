@@ -2,11 +2,18 @@ import Indicators from '@/app/components/common/Indicators';
 import WatchListButton from '@/app/components/common/WatchListButton';
 import { Button } from '@/components/ui/button';
 import { formatNumber } from '@/lib/utils';
+import usePortfolioStore from '@/store/portfolioStore';
 import { CoinInfoProps } from '@/types/markets';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const CoinInfo = ({ coin }: { coin: CoinInfoProps }) => {
+  const addToPortfolio = usePortfolioStore((state) => state.addToPortfolio);
+
+  const handleClick = () => {
+    addToPortfolio(coin);
+  };
+
   return (
     <section className="mb-8">
       <div className="flex items-center gap-2">
@@ -33,6 +40,7 @@ const CoinInfo = ({ coin }: { coin: CoinInfoProps }) => {
         asChild
         variant="secondary"
         className="bg-black mt-4 text-white hover:text-orange-400 transition-all"
+        onClick={handleClick}
       >
         <Link href={`/markets/${coin.id}/add`}>Add To Portfolio</Link>
       </Button>
