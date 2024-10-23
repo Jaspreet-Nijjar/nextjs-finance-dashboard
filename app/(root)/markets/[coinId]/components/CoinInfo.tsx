@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { formatNumber } from '@/lib/utils';
 import { CoinInfoProps } from '@/types/markets';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const CoinInfo = ({ coin }: { coin: CoinInfoProps }) => {
   return (
@@ -29,10 +30,11 @@ const CoinInfo = ({ coin }: { coin: CoinInfoProps }) => {
       </div>
 
       <Button
+        asChild
         variant="secondary"
-        className="bg-gray-400 mt-4 hover:bg-black text-white transition-all"
+        className="bg-black mt-4 text-white hover:text-orange-400 transition-all"
       >
-        Add To Portfolio
+        <Link href={`/markets/${coin.id}/add`}>Add To Portfolio</Link>
       </Button>
     </section>
   );
