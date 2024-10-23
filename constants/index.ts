@@ -54,3 +54,12 @@ export const COIN_HEADERS_CLASSES = [
   'hidden xl:block text-center text-orange-400 font-bold col-span-2',
   'hidden xl:block text-center text-orange-400 font-bold',
 ];
+
+// Watchlist Component
+export const WATCHLIST_HEADERS = [
+  'Coin',
+  'Price',
+  'Market Cap',
+  'High 24hr',
+  'Low 24hr',
+];
