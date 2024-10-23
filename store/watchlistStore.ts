@@ -36,9 +36,15 @@ const useWatchlistStore = create<WatchlistStore>((set) => ({
   watchlist: [],
 
   addToWatchlist: (coin: Coin) =>
-    set((state) => ({
-      watchlist: [...state.watchlist, coin],
-    })),
+    set((state) => {
+      const isAlreadyInWatchlist = state.watchlist.some(
+        (c) => c.id === coin.id
+      );
+      if (!isAlreadyInWatchlist) {
+        return { watchlist: [...state.watchlist, coin] };
+      }
+      return state;
+    }),
 
   removeFromWatchlist: (coinId: string) =>
     set((state) => ({
