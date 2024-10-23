@@ -16,6 +16,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import usePortfolioStore from '@/store/portfolioStore';
 import Image from 'next/image';
+import { formatNumber } from '@/lib/utils';
 
 const formSchema = z.object({
   amount: z.number().min(1, 'Amount must be at least 1'),
@@ -30,9 +31,10 @@ const AddToPortfolioForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       amount: 0,
-      cost: 0,
     },
   });
+
+  const amount = form.watch('amount');
 
   if (!portfolio) {
     return <p>No coin selected for the portfolio.</p>;
@@ -65,7 +67,6 @@ const AddToPortfolioForm = () => {
               <FormLabel>Amount</FormLabel>
               <FormControl>
                 <Input
-                  type="number"
                   placeholder="Number of coins"
                   {...field}
                   onChange={(e) => field.onChange(Number(e.target.value))}
@@ -78,6 +79,13 @@ const AddToPortfolioForm = () => {
             </FormItem>
           )}
         />
+        {amount > 0 && (
+          <p className="text-[14px] text-gray-600">
+            {amount} {portfolio.name} = $
+            {formatNumber(portfolio.market_data.current_price.usd * amount)}
+          </p>
+        )}
+
         <Button type="submit">Submit</Button>
       </form>
     </Form>
