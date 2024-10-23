@@ -39,9 +39,9 @@ const Watchlist = () => {
       </CardHeader>
       <CardContent>
         <div>
-          <div className="grid grid-cols-5 gap-10 items-center">
+          <div className="grid grid-cols-6 gap-10 items-center">
             {WATCHLIST_HEADERS.map((header) => (
-              <p className="text-[14px] text-gray-600 mb-2 font-bold">
+              <p className="text-[14px]  text-gray-600 mb-2 font-bold">
                 {header}
               </p>
             ))}
@@ -51,7 +51,7 @@ const Watchlist = () => {
             {watchlist.map((coin) => (
               <li
                 key={coin.id}
-                className="grid grid-cols-5 gap-10 mb-6 items-center"
+                className="grid grid-cols-6 gap-10 mb-6 items-center"
               >
                 <div>
                   <div className="flex items-center gap-2">
@@ -110,6 +110,10 @@ const Watchlist = () => {
                     </p>
                   </div>
                 </div>
+
+                <button className="text-gray-500 text-[13px] hover:text-orange-400 hover:font-bold transition-all">
+                  Remove
+                </button>
               </li>
             ))}
           </ul>
