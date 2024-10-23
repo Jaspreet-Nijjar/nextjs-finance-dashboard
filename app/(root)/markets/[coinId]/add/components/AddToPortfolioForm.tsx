@@ -24,6 +24,7 @@ const formSchema = z.object({
 
 const AddToPortfolioForm = () => {
   const portfolio = usePortfolioStore((state) => state.portfolio);
+  const addToAssets = usePortfolioStore((state) => state.addToAssets);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -37,9 +38,15 @@ const AddToPortfolioForm = () => {
     return <p>No coin selected for the portfolio.</p>;
   }
 
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    const assets = { ...portfolio, amount: values.amount };
+
+    addToAssets(assets);
+  }
+
   return (
     <Form {...form}>
-      <form className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <div className="flex gap-2 items-center">
           <Image
             src={portfolio.image.large}
@@ -57,7 +64,12 @@ const AddToPortfolioForm = () => {
             <FormItem>
               <FormLabel>Amount</FormLabel>
               <FormControl>
-                <Input placeholder="amount" {...field} />
+                <Input
+                  type="number"
+                  placeholder="Number of coins"
+                  {...field}
+                  onChange={(e) => field.onChange(Number(e.target.value))}
+                />
               </FormControl>
               <FormDescription>
                 Enter the number of coins you wish to purchase
