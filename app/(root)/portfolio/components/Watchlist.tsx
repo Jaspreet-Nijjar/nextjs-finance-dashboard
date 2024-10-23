@@ -13,6 +13,7 @@ import { formatNumber } from '@/lib/utils';
 import Link from 'next/link';
 import Indicators from '@/app/components/common/Indicators';
 import millify from 'millify';
+import { WATCHLIST_HEADERS } from '@/constants';
 
 const Watchlist = () => {
   const watchlist = useWatchlistStore((state) => state.watchlist);
@@ -24,8 +25,8 @@ const Watchlist = () => {
         <CardDescription>
           <div>
             <p className="mb-2">
-              These are the list of coins in your current watchlist you have
-              added. You can find all coins below.
+              View the list of coins in your current watchlist. You can find all
+              coins below.
             </p>
             <Link
               href="/markets"
@@ -38,17 +39,21 @@ const Watchlist = () => {
       </CardHeader>
       <CardContent>
         <div>
+          <div className="grid grid-cols-5 gap-10 items-center">
+            {WATCHLIST_HEADERS.map((header) => (
+              <p className="text-[14px] text-gray-600 mb-2 font-bold">
+                {header}
+              </p>
+            ))}
+          </div>
+
           <ul>
             {watchlist.map((coin) => (
               <li
                 key={coin.id}
-                className="grid grid-cols-5 gap-10 items-center"
+                className="grid grid-cols-5 gap-10 mb-6 items-center"
               >
                 <div>
-                  <div>
-                    <p className="text-[14px] text-gray-600">Coin</p>
-                  </div>
-
                   <div className="flex items-center gap-2">
                     <Image
                       src={coin.image.large}
@@ -69,7 +74,6 @@ const Watchlist = () => {
                 </div>
 
                 <div>
-                  <p className="text-[14px] text-gray-600">Price</p>
                   <div className="flex items-center">
                     <p className="text-[13px]">
                       ${formatNumber(coin.market_data.current_price.usd)}
@@ -81,7 +85,6 @@ const Watchlist = () => {
                 </div>
 
                 <div>
-                  <p className="text-[14px] text-gray-600">Market Cap</p>
                   <div className="flex items-center">
                     <p className="text-[13px]">
                       ${millify(coin.market_data.market_cap.usd)}
@@ -93,7 +96,6 @@ const Watchlist = () => {
                 </div>
 
                 <div>
-                  <p className="text-[14px] text-gray-600">High 24hr</p>
                   <div className="flex items-center">
                     <p className="text-[13px]">
                       ${millify(coin.market_data.high_24h.usd)}
@@ -102,7 +104,6 @@ const Watchlist = () => {
                 </div>
 
                 <div>
-                  <p className="text-[14px] text-gray-600">Low 24hr</p>
                   <div className="flex items-center">
                     <p className="text-[13px]">
                       ${millify(coin.market_data.low_24h.usd)}
