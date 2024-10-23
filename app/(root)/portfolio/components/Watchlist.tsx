@@ -17,6 +17,13 @@ import { WATCHLIST_HEADERS } from '@/constants';
 
 const Watchlist = () => {
   const watchlist = useWatchlistStore((state) => state.watchlist);
+  const removeFromWatchlist = useWatchlistStore(
+    (state) => state.removeFromWatchlist
+  );
+
+  const handleClick = (coinId: string) => {
+    removeFromWatchlist(coinId);
+  };
 
   return (
     <Card>
@@ -111,7 +118,10 @@ const Watchlist = () => {
                   </div>
                 </div>
 
-                <button className="text-gray-500 text-[13px] hover:text-orange-400 hover:font-bold transition-all">
+                <button
+                  onClick={() => removeFromWatchlist(coin.id)}
+                  className="text-gray-500 text-[13px] hover:text-orange-400 hover:font-bold transition-all"
+                >
                   Remove
                 </button>
               </li>

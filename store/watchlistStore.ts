@@ -29,14 +29,20 @@ interface Coin {
 interface WatchlistStore {
   watchlist: Coin[];
   addToWatchlist: (coin: Coin) => void;
+  removeFromWatchlist: (coinId: string) => void;
 }
 
 const useWatchlistStore = create<WatchlistStore>((set) => ({
   watchlist: [],
 
-  addToWatchlist: (coin) =>
+  addToWatchlist: (coin: Coin) =>
     set((state) => ({
       watchlist: [...state.watchlist, coin],
+    })),
+
+  removeFromWatchlist: (coinId: string) =>
+    set((state) => ({
+      watchlist: state.watchlist.filter((coin) => coin.id !== coinId),
     })),
 }));
 
