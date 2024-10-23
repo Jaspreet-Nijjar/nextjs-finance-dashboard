@@ -9,11 +9,10 @@ import {
   CardHeader,
   CardTitle,
 } from '@/app/components/ui/card';
-import { cn, formatNumber } from '@/lib/utils';
+import { formatNumber } from '@/lib/utils';
 import Link from 'next/link';
 import Indicators from '@/app/components/common/Indicators';
 import millify from 'millify';
-import { Button } from '@/components/ui/button';
 
 const Watchlist = () => {
   const watchlist = useWatchlistStore((state) => state.watchlist);
@@ -116,22 +115,6 @@ const Watchlist = () => {
         </div>
       </CardContent>
     </Card>
-
-    // <div>
-    //   <ul>
-    //     {watchlist.map((coin) => (
-    //       <li key={coin.id}>
-    //         <p>{coin.name}</p>
-    //         <Image
-    //           src={coin.image.large}
-    //           alt={coin.name}
-    //           width={100}
-    //           height={100}
-    //         />
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div>
   );
 };
 
