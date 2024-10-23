@@ -14,6 +14,8 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import usePortfolioStore from '@/store/portfolioStore';
+import Image from 'next/image';
 
 const formSchema = z.object({
   amount: z.number().min(1, 'Amount must be at least 1'),
@@ -21,6 +23,8 @@ const formSchema = z.object({
 });
 
 const AddToPortfolioForm = () => {
+  const portfolio = usePortfolioStore((state) => state.portfolio);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -29,9 +33,23 @@ const AddToPortfolioForm = () => {
     },
   });
 
+  if (!portfolio) {
+    return <p>No coin selected for the portfolio.</p>;
+  }
+
   return (
     <Form {...form}>
       <form className="space-y-8">
+        <div className="flex gap-2 items-center">
+          <Image
+            src={portfolio.image.large}
+            alt={portfolio.id}
+            width={50}
+            height={50}
+          />
+          <p className="font-semibold">{portfolio.name}</p>
+        </div>
+
         <FormField
           control={form.control}
           name="amount"
@@ -39,7 +57,7 @@ const AddToPortfolioForm = () => {
             <FormItem>
               <FormLabel>Amount</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="amount" {...field} />
               </FormControl>
               <FormDescription>
                 Enter the number of coins you wish to purchase

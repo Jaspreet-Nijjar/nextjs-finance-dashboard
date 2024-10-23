@@ -1,3 +1,5 @@
+'use client';
+
 import Indicators from '@/app/components/common/Indicators';
 import WatchListButton from '@/app/components/common/WatchListButton';
 import { Button } from '@/components/ui/button';
