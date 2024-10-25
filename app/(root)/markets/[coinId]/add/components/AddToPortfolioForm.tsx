@@ -17,13 +17,14 @@ import { Button } from '@/components/ui/button';
 import usePortfolioStore from '@/store/portfolioStore';
 import Image from 'next/image';
 import { formatNumber } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
 
 const formSchema = z.object({
   amount: z.number().min(1, 'Amount must be at least 1'),
-  cost: z.number().min(0, 'Cost must be a positive number'),
 });
 
 const AddToPortfolioForm = () => {
+  const router = useRouter();
   const portfolio = usePortfolioStore((state) => state.portfolio);
   const addToAssets = usePortfolioStore((state) => state.addToAssets);
 
@@ -40,11 +41,13 @@ const AddToPortfolioForm = () => {
     return <p>No coin selected for the portfolio.</p>;
   }
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     const assets = { ...portfolio, amount: values.amount };
-
-    addToAssets(assets);
+    await addToAssets(assets);
+    router.push('/portfolio');
   }
+
+  console.log(form.formState.errors);
 
   return (
     <Form {...form}>
