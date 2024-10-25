@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -24,15 +25,14 @@ const formSchema = z.object({
 });
 
 const AddToPortfolioForm = () => {
+  const [showAddMessage, setShowAddMessage] = useState(false);
+
   const router = useRouter();
   const portfolio = usePortfolioStore((state) => state.portfolio);
   const addToAssets = usePortfolioStore((state) => state.addToAssets);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      amount: 0,
-    },
   });
 
   const amount = form.watch('amount');
@@ -41,13 +41,15 @@ const AddToPortfolioForm = () => {
     return <p>No coin selected for the portfolio.</p>;
   }
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: z.infer<typeof formSchema>) {
     const assets = { ...portfolio, amount: values.amount };
-    await addToAssets(assets);
-    router.push('/portfolio');
-  }
+    addToAssets(assets);
+    setShowAddMessage(true);
 
-  console.log(form.formState.errors);
+    setTimeout(() => {
+      router.push('/portfolio');
+    }, 5000);
+  }
 
   return (
     <Form {...form}>
@@ -88,7 +90,12 @@ const AddToPortfolioForm = () => {
             {formatNumber(portfolio.market_data.current_price.usd * amount)}
           </p>
         )}
-
+        {showAddMessage && (
+          <p className="text-[14px] text-green-600 max-w-sm">
+            {`Thank you for your purchase of ${portfolio.name}. Your assets have been added to the
+            portfolio. You will now be directed to the Portfolio page.`}
+          </p>
+        )}
         <Button type="submit">Submit</Button>
       </form>
     </Form>
