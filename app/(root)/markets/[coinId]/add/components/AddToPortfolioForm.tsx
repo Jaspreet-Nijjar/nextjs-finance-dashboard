@@ -26,6 +26,7 @@ const formSchema = z.object({
 
 const AddToPortfolioForm = () => {
   const [showAddMessage, setShowAddMessage] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
   const router = useRouter();
   const portfolio = usePortfolioStore((state) => state.portfolio);
@@ -45,6 +46,7 @@ const AddToPortfolioForm = () => {
     const assets = { ...portfolio, amount: values.amount };
     addToAssets(assets);
     setShowAddMessage(true);
+    setHasSubmitted(true);
 
     setTimeout(() => {
       router.push('/portfolio');
@@ -96,7 +98,9 @@ const AddToPortfolioForm = () => {
             portfolio. You will now be directed to the Portfolio page.`}
           </p>
         )}
-        <Button type="submit">Submit</Button>
+        <Button type="submit" disabled={hasSubmitted}>
+          Submit
+        </Button>
       </form>
     </Form>
   );
