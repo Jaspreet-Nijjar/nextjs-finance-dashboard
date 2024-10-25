@@ -63,3 +63,12 @@ export const WATCHLIST_HEADERS = [
   'High 24hr',
   'Low 24hr',
 ];
+
+// Assets Component
+export const ASSET_HEADERS = [
+  'Coin',
+  'Symbol',
+  'Amount',
+  'Price',
+  'Market Cap',
+];

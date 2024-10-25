@@ -13,12 +13,16 @@ import AssetsTable from './AssetsTable';
 const Assets = () => {
   const assets = usePortfolioStore((state) => state.assets);
 
+  // if (!assets || assets.length === 0) {
+  //   return <p>No assets added to the portfolio.</p>;
+  // }
+
   return (
     <Card>
       <CardHeader>
         <CardTitle>Assets</CardTitle>
         <CardDescription>
-          View the coins you have added to your portfolio below
+          View the coins you have added to your portfolio below.
         </CardDescription>
       </CardHeader>
       <CardContent>
