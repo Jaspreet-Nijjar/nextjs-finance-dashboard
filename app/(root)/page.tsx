@@ -1,5 +1,5 @@
 import TopAssets from '../components/dashboard/TopAssets';
-import Watchlist from './portfolio/components/Watchlist';
+import Watchlist from '@/app/components/portfolio/Watchlist/Watchlist';
 
 export default function Home() {
   return (
