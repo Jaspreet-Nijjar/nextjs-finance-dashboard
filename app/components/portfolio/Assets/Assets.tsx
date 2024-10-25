@@ -9,9 +9,12 @@ import {
   CardTitle,
 } from '../../ui/card';
 import AssetsTable from './AssetsTable';
+import Link from 'next/link';
 
 const Assets = () => {
   const assets = usePortfolioStore((state) => state.assets);
+
+  const hasAssets = assets.length > 0;
 
   // if (!assets || assets.length === 0) {
   //   return <p>No assets added to the portfolio.</p>;
@@ -22,12 +25,28 @@ const Assets = () => {
       <CardHeader>
         <CardTitle>Assets</CardTitle>
         <CardDescription>
-          View the coins you have added to your portfolio below.
+          {hasAssets ? (
+            'View the coins you have added to your portfolio below.'
+          ) : (
+            <div>
+              <p className="mb-4">
+                You currently do not have any assets in your portfolio.
+              </p>
+              <Link
+                href="/markets"
+                className="rounded px-2 py-0.5 text-sm bg-black text-white hover:text-orange-500 transition-all"
+              >
+                View All Coins
+              </Link>
+            </div>
+          )}
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <AssetsTable assets={assets} />
-      </CardContent>
+      {hasAssets && (
+        <CardContent>
+          <AssetsTable assets={assets} />
+        </CardContent>
+      )}
     </Card>
   );
 };
