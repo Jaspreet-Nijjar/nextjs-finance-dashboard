@@ -14,7 +14,7 @@ const Balance = () => {
 
   return (
     <div>
-      <BalanceCard totalBalance={totalBalance} />
+      <BalanceCard totalBalance={totalBalance} assets={assets} />
     </div>
   );
 };
