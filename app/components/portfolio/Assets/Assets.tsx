@@ -10,15 +10,12 @@ import {
 } from '../../ui/card';
 import AssetsTable from './AssetsTable';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 const Assets = () => {
   const assets = usePortfolioStore((state) => state.assets);
 
   const hasAssets = assets.length > 0;
-
-  // if (!assets || assets.length === 0) {
-  //   return <p>No assets added to the portfolio.</p>;
-  // }
 
   return (
     <Card>

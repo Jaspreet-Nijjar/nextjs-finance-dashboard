@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { Card, CardContent } from '../../components/ui/card';
+import { Card, CardContent } from '../../../components/ui/card';
 import Link from 'next/link';
 import { cn, formatNumber } from '@/lib/utils';
 import millify from 'millify';
-import Indicators from '../common/Indicators';
+import Indicators from '../../common/Indicators';
 
 const TopAssetsItem = ({ coin }) => {
   return (
