@@ -9,30 +9,33 @@ interface Coin {
       usd: number;
     };
   };
-  amount: number;
   image: {
     large: string;
   };
 }
 
+interface Asset extends Coin {
+  amount: number;
+}
+
 interface PortfolioStore {
   portfolio: Coin | null;
-  assets: Coin[];
+  assets: Asset[];
   addToPortfolio: (coin: Coin) => void;
-  addToAssets: (coin: Coin) => void;
+  addToAssets: (asset: Asset) => void;
 }
 
 const usePortfolioStore = create<PortfolioStore>((set) => ({
   portfolio: null,
   assets: [],
 
-  addToPortfolio: (coin: any) => {
+  addToPortfolio: (coin) => {
     set({ portfolio: coin });
   },
 
-  addToAssets: (coin: any) => {
+  addToAssets: (asset) => {
     set((state) => ({
-      assets: [...state.assets, coin],
+      assets: [...state.assets, asset],
     }));
   },
 }));

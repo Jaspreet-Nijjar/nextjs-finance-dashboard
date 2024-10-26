@@ -72,3 +72,12 @@ export const ASSET_HEADERS = [
   'Price',
   'Market Cap',
 ];
+
+// Transaction Component
+export const TRANSACTIONS_HEADERS = [
+  'Coin',
+  'Amount',
+  'Cost',
+  'Status',
+  'Date',
+];

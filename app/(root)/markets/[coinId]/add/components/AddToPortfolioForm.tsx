@@ -43,6 +43,11 @@ const AddToPortfolioForm = () => {
   }
 
   function onSubmit(values: z.infer<typeof formSchema>) {
+    if (!portfolio) {
+      console.error('Portfolio is not defined');
+      return;
+    }
+
     const assets = { ...portfolio, amount: values.amount };
     addToAssets(assets);
     setShowAddMessage(true);
