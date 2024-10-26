@@ -1,6 +1,7 @@
 import Watchlist from '@/app/components/portfolio/Watchlist/Watchlist';
 import TopAssets from '../components/dashboard/TopAssets/TopAssets';
 import Balance from '../components/dashboard/Balance/Balance';
+import TrendingCoins from '../components/markets/TrendingCoins/TrendingCoins';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Balance />
         <Watchlist />
         <TopAssets />
+        <TrendingCoins />
       </section>
     </main>
   );

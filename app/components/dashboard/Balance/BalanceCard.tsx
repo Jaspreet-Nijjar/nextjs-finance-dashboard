@@ -1,11 +1,11 @@
-import { formatNumber } from '@/lib/utils';
+import { cn, formatNumber } from '@/lib/utils';
 import { Card, CardContent, CardHeader, CardTitle } from '../../ui/card';
 import BalanceDoughnutChart from './BalanceDoughnutChart';
 import Link from 'next/link';
 
 const BalanceCard = ({ totalBalance, assets }) => {
   return (
-    <Card>
+    <Card className={cn('w-fit')}>
       <CardHeader>
         <CardTitle>Balance</CardTitle>
       </CardHeader>

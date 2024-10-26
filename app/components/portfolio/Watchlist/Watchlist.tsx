@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/app/components/ui/card';
-import { formatNumber } from '@/lib/utils';
+import { cn, formatNumber } from '@/lib/utils';
 import Link from 'next/link';
 import Indicators from '@/app/components/common/Indicators';
 import millify from 'millify';
@@ -27,7 +27,7 @@ const Watchlist = () => {
   const hasCoinsInWatchlist = watchlist.length > 0;
 
   return (
-    <Card>
+    <Card className={cn('w-fit')}>
       <CardHeader>
         <CardTitle>Watchlist</CardTitle>
         <CardDescription>

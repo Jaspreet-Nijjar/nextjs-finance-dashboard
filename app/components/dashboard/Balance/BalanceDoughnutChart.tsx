@@ -22,7 +22,7 @@ const BalanceDoughnutChart = ({ assets }) => {
   };
 
   const options = {
-    cutout: 105,
+    cutout: 115,
     responsive: true,
     plugins: {
       legend: {
