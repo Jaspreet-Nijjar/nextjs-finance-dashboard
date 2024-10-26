@@ -48,7 +48,11 @@ const AddToPortfolioForm = () => {
       return;
     }
 
-    const assets = { ...portfolio, amount: values.amount };
+    const assets = {
+      ...portfolio,
+      amount: values.amount,
+      date: new Date().toLocaleDateString(),
+    };
     addToAssets(assets);
     setShowAddMessage(true);
     setHasSubmitted(true);

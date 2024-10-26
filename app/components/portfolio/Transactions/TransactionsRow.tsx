@@ -13,7 +13,7 @@ const TransactionsRow = ({ assets }) => {
           <p>{asset.amount}</p>
           <p>${formatNumber(cost)}</p>
           <p className="text-green-600">Completed</p>
-          {/* <p>Date</p> */}
+          <p>{asset.date}</p>
         </div>
       ))}
     </div>
