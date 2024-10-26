@@ -2,9 +2,9 @@ import { TRANSACTIONS_HEADERS } from '@/constants';
 
 const TransactionsHeaders = () => {
   return (
-    <div>
+    <div className="grid grid-cols-5 p-4 border-b border-gray-200 text-[13px]">
       {TRANSACTIONS_HEADERS.map((header) => (
-        <p>{header}</p>
+        <p className="font-bold text-center">{header}</p>
       ))}
     </div>
   );

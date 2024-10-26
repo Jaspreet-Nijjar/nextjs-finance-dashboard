@@ -1,4 +1,5 @@
 import Assets from '@/app/components/portfolio/Assets/Assets';
+import Transactions from '@/app/components/portfolio/Transactions/Transactions';
 import Watchlist from '@/app/components/portfolio/Watchlist/Watchlist';
 
 export const metadata = {
@@ -11,6 +12,7 @@ const Portfolio = () => {
     <div className="flex flex-col p-4 mt-12 ml-[70px] md:ml-[250px]">
       <Watchlist />
       <Assets />
+      <Transactions />
     </div>
   );
 };
