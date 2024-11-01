@@ -14,7 +14,7 @@ import Link from 'next/link';
 
 const RecentTransactions = () => {
   const assetData = usePortfolioStore((state) => state.assets);
-  const recentTransactions = assetData.slice(0, 3);
+  const recentTransactions = assetData.slice(-3);
 
   return (
     <Card className={cn('w-full h-full')}>
@@ -28,11 +28,11 @@ const RecentTransactions = () => {
       </CardHeader>
       <CardContent>
         {assetData.length > 0 && (
-          <div>
+          <div className="grid gap-24">
             <RecentTransactionsTable recentTransactions={recentTransactions} />
             <Link
               href="/portfolio"
-              className="border border-gray-300 rounded px-2 py-0.5 text-sm bg-black text-white hover:text-orange-500 transition-all"
+              className="w-fit rounded px-2 py-0.5 text-sm bg-black text-white hover:text-orange-500 transition-all"
             >
               View All Transactions
             </Link>
