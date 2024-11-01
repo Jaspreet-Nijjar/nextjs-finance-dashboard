@@ -8,7 +8,7 @@ const MarketCap = async () => {
   const marketCap = totalMarketCap.usd;
 
   return (
-    <Card className={cn('w-[95%] py-2.5 lg:w-full')}>
+    <Card className={cn('w-full py-2.5 lg:w-fit')}>
       <CardContent className={cn('py-6')}>
         <h1 className="text-xl font-bold text-left">
           ${formatNumber(marketCap)}

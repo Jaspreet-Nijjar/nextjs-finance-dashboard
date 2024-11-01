@@ -28,11 +28,11 @@ const RecentTransactions = () => {
       </CardHeader>
       <CardContent>
         {assetData.length > 0 && (
-          <div className="grid gap-24">
+          <div className="grid">
             <RecentTransactionsTable recentTransactions={recentTransactions} />
             <Link
               href="/portfolio"
-              className="w-fit rounded px-2 py-0.5 text-sm bg-black text-white hover:text-orange-500 transition-all"
+              className="mt-14 w-fit rounded px-2 py-0.5 text-sm bg-black text-white hover:text-orange-500 transition-all"
             >
               View All Transactions
             </Link>

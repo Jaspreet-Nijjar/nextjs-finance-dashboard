@@ -124,6 +124,7 @@ export type Asset = {
   date?: string;
   image: {
     large: string;
+    small?: string;
   };
   market_data: {
     current_price: {
@@ -138,3 +139,20 @@ export type Asset = {
 export type AssetsProps = {
   assets: Asset[];
 };
+
+export type RecentTransaction = {
+  name: string;
+  id: string;
+  date: string;
+  amount: number;
+  market_data: {
+    current_price: {
+      usd: number;
+    };
+  };
+  image: {
+    small: string;
+  };
+};
+
+export type RecentTransactionsProps = Asset[];

@@ -1,7 +1,12 @@
+import { RecentTransactionsProps } from '@/types/markets';
 import RecentTransactionHeaders from './RecentTransactionHeaders';
 import RecentTransactionRow from './RecentTransactionRow';
 
-const RecentTransactionsTable = ({ recentTransactions }) => {
+const RecentTransactionTable = ({
+  recentTransactions,
+}: {
+  recentTransactions: RecentTransactionsProps;
+}) => {
   return (
     <div>
       <RecentTransactionHeaders />
@@ -10,4 +15,4 @@ const RecentTransactionsTable = ({ recentTransactions }) => {
   );
 };
 
-export default RecentTransactionsTable;
+export default RecentTransactionTable;

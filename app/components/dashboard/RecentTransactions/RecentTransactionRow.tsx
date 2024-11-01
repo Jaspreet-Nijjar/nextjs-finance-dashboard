@@ -1,7 +1,12 @@
 import { formatNumber } from '@/lib/utils';
+import { RecentTransactionsProps } from '@/types/markets';
 import Image from 'next/image';
 
-const RecentTransactionRow = ({ recentTransactions }) => {
+const RecentTransactionRow = ({
+  recentTransactions,
+}: {
+  recentTransactions: RecentTransactionsProps;
+}) => {
   return (
     <div>
       {recentTransactions.map((transaction) => {
