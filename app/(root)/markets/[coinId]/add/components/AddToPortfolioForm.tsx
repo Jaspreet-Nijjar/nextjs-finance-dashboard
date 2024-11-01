@@ -59,7 +59,7 @@ const AddToPortfolioForm = () => {
 
     setTimeout(() => {
       router.push('/portfolio');
-    }, 3000);
+    }, 700);
   }
 
   return (

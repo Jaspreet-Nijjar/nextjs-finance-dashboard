@@ -1,9 +1,10 @@
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { AssetsProps } from '@/types/markets';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const BalanceDoughnutChart = ({ assets }) => {
+const BalanceDoughnutChart = ({ assets }: AssetsProps) => {
   const chartData = {
     labels: assets.map((asset) => asset.name),
     datasets: [
@@ -27,8 +28,8 @@ const BalanceDoughnutChart = ({ assets }) => {
     maintainAspectRatio: true,
     plugins: {
       legend: {
-        position: 'right',
-        onClick: null,
+        position: 'right' as const,
+        onClick: undefined,
       },
     },
   };
