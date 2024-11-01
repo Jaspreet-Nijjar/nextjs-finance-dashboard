@@ -2,7 +2,13 @@ import { CoinProps } from '@/types/markets';
 import CoinRow from './CoinRow';
 import Pagination from '../../common/Pagination';
 
-const CoinList = ({ coins, currentPage, onPageChange }) => {
+export type CoinListProps = {
+  coins: CoinProps[];
+  currentPage: number;
+  onPageChange: (page: number) => void;
+};
+
+const CoinList = ({ coins, currentPage, onPageChange }: CoinListProps) => {
   return (
     <div>
       {coins.map((coin: CoinProps) => (
