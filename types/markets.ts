@@ -121,6 +121,7 @@ export type Asset = {
   name: string;
   symbol: string;
   amount: number;
+  date: string;
   image: {
     large: string;
   };
