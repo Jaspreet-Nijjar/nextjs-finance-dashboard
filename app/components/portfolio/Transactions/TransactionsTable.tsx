@@ -1,7 +1,8 @@
+import { AssetsProps } from '@/types/markets';
 import TransactionsHeaders from './TransactionsHeaders';
 import TransactionsRow from './TransactionsRow';
 
-const TransactionsTable = ({ assets }) => {
+const TransactionsTable = ({ assets }: AssetsProps) => {
   return (
     <div>
       <TransactionsHeaders />
