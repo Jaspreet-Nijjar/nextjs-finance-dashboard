@@ -1,6 +1,7 @@
 import { formatNumber } from '@/lib/utils';
 import { RecentTransactionsProps } from '@/types/markets';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const RecentTransactionRow = ({
   recentTransactions,
@@ -18,14 +19,19 @@ const RecentTransactionRow = ({
             key={transaction.id}
             className="mb-3 text-center text-gray-600 grid grid-cols-3 text-[13px] justify-between"
           >
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-4">
               <Image
                 src={transaction.image.small}
                 alt="coin logo"
                 width={20}
                 height={20}
               />
-              <p className="w-full">{transaction.name}</p>
+              <Link
+                href={`/markets/${transaction.id}`}
+                className="hover:text-orange-500 transition-all"
+              >
+                {transaction.name}
+              </Link>
             </div>
 
             <p>${formatNumber(cost)}</p>
