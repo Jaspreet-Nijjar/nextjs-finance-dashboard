@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BsFillStarFill } from 'react-icons/bs';
 import {
   Tooltip,
@@ -8,21 +8,27 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import useWatchlistStore from '@/store/watchlistStore';
+import { Coin } from '@/store/watchlistStore';
 
-const WatchListButton = ({ coin }: any) => {
+const WatchListButton = ({ coin }: { coin: Coin }) => {
   const watchlist = useWatchlistStore((state) => state.watchlist);
   const addToWatchlist = useWatchlistStore((state) => state.addToWatchlist);
   const removeFromWatchlist = useWatchlistStore(
     (state) => state.removeFromWatchlist
   );
 
+  const coinInWatchlist = coin && watchlist.some((item) => item.id === coin.id);
+  const [isInWatchlist, setIsInWatchlist] = useState(coinInWatchlist);
+
+  useEffect(() => {
+    if (coin) {
+      setIsInWatchlist(watchlist.some((item) => item.id === coin.id));
+    }
+  }, [coin, watchlist]);
+
   if (!coin || !coin.id) {
     return null;
   }
-
-  const coinInWatchlist = watchlist.some((item) => item.id === coin.id);
-
-  const [isInWatchlist, setIsInWatchlist] = useState(coinInWatchlist);
 
   const handleClick = () => {
     if (isInWatchlist) {

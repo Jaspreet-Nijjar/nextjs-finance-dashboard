@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-interface Coin {
+export interface Coin {
   id: string;
   name: string;
   symbol: string;
@@ -8,6 +8,7 @@ interface Coin {
   image: {
     large: string;
   };
+  market_cap_rank: number;
   market_data: {
     price_change_percentage_24h: number;
     market_cap_change_percentage_24h: number;

@@ -5,11 +5,11 @@ import WatchListButton from '@/app/components/common/WatchListButton';
 import { Button } from '@/components/ui/button';
 import { formatNumber } from '@/lib/utils';
 import usePortfolioStore from '@/store/portfolioStore';
-import { CoinInfoProps } from '@/types/markets';
+import { Coin } from '@/store/watchlistStore';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const CoinInfo = ({ coin }: { coin: CoinInfoProps }) => {
+const CoinInfo = ({ coin }: { coin: Coin }) => {
   const addToPortfolio = usePortfolioStore((state) => state.addToPortfolio);
 
   const handleClick = () => {

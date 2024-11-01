@@ -1,6 +1,11 @@
 import { Button } from '@/components/ui/button';
 
-const Pagination = ({ currentPage, onPageChange }: any) => {
+interface Pagination {
+  currentPage: number;
+  onPageChange: (page: number) => void;
+}
+
+const Pagination = ({ currentPage, onPageChange }: Pagination) => {
   return (
     <div className="flex justify-center items-center my-4">
       <Button

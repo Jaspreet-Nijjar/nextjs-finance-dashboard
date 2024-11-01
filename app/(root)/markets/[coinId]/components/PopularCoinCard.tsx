@@ -13,7 +13,7 @@ const PopularCoinCard = ({ coin }: { coin: PopularCoinProps }) => {
         <div>
           <div className="flex justify-between">
             <Image src={coin.image} alt={coin.id} width={40} height={50} />
-            <WatchListButton />
+            <WatchListButton coin={coin} />
           </div>
 
           <p className="text-[14px] text-gray-600">{coin.name}</p>
