@@ -23,7 +23,7 @@ const BalanceDoughnutChart = ({ assets }: AssetsProps) => {
   };
 
   const options = {
-    cutout: 175,
+    cutout: '70%',
     responsive: true,
     maintainAspectRatio: true,
     plugins: {

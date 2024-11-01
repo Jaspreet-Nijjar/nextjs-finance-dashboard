@@ -13,7 +13,7 @@ const TopAssets = async () => {
   const coins = coinsData.slice(0, 3);
 
   return (
-    <Card className={cn('w-full h-fit')}>
+    <Card className={cn('w-full')}>
       <CardHeader>
         <CardTitle>Top Coins</CardTitle>
       </CardHeader>

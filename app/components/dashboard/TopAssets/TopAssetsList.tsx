@@ -3,7 +3,7 @@ import TopAssetsItem from './TopAssetsItem';
 
 const TopAssetsList = ({ coins }: TopAssetsListProps) => {
   return (
-    <div className="flex max-w-sm:flex-col gap-2">
+    <div className="max-w-sm:flex-col xl:flex xl:flex-row gap-2">
       {coins.map((coin) => (
         <TopAssetsItem key={coin.id} coin={coin} />
       ))}

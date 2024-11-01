@@ -42,9 +42,8 @@ const Watchlist = () => {
       <CardContent>
         <div>
           {!hasCoinsInWatchlist && (
-            <p className="text-[14px]  text-gray-600 mb-4 max-w-xs mt-[-20px]">
-              You currently do not have any coins added to your watchlist. View
-              all coins below.
+            <p className="text-[14px]  text-gray-600 mb-4  mt-[-20px]">
+              You currently do not have any coins added to your watchlist.
             </p>
           )}
 

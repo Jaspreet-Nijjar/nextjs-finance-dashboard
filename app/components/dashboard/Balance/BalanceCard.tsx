@@ -12,7 +12,7 @@ const BalanceCard = ({
   assets: Asset[];
 }) => {
   return (
-    <Card className={cn('w-full h-fit')}>
+    <Card className={cn('w-full h-full lg:w-fit')}>
       <CardHeader>
         <CardTitle>Balance</CardTitle>
       </CardHeader>

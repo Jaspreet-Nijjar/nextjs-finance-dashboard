@@ -8,7 +8,7 @@ import { CoinProps } from '@/types/markets';
 
 const TopAssetsItem = ({ coin }: { coin: CoinProps }) => {
   return (
-    <Card className={cn('mb-4')}>
+    <Card className={cn('w-full p-2 mb-4')}>
       <CardContent>
         <div>
           <div className="flex items-center gap-2 mt-4">

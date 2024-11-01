@@ -18,6 +18,7 @@ const CoinRow = ({ coin }: { coin: CoinProps }) => {
           src={coin.image}
           alt="image of coin"
           width={30}
+          height={30}
           className="mr-2"
         />
         <Link href={`/markets/${coin.id}`}>
