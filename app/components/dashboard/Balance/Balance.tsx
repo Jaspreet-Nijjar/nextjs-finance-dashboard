@@ -7,8 +7,7 @@ const Balance = () => {
   const assets = usePortfolioStore((state) => state.assets);
 
   const totalBalance = assets.reduce((acc, asset) => {
-    const assetTotal =
-      asset.amount * asset.market_data.current_price.usd || `${0}`;
+    const assetTotal = asset.amount * asset.market_data.current_price.usd || 0;
     return acc + assetTotal;
   }, 0);
 
