@@ -3,6 +3,7 @@ import { formatNumber } from '@/lib/utils';
 import Link from 'next/link';
 import Indicators from '../../common/Indicators';
 import millify from 'millify';
+import Image from 'next/image';
 
 const CoinRow = ({ coin }: { coin: CoinProps }) => {
   return (
@@ -13,7 +14,12 @@ const CoinRow = ({ coin }: { coin: CoinProps }) => {
       <div className="text-center">{coin.market_cap_rank}</div>
 
       <div className="flex items-center justify-center">
-        <img src={coin.image} alt="image of coin" width={30} className="mr-2" />
+        <Image
+          src={coin.image}
+          alt="image of coin"
+          width={30}
+          className="mr-2"
+        />
         <Link href={`/markets/${coin.id}`}>
           <div className="hover:text-orange-500 transition ease-in 500">
             {coin.name} ({coin.symbol.toUpperCase()})

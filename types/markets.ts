@@ -31,12 +31,10 @@ export type TopAssetsListProps = {
 };
 
 export type Category = {
-  category: {
-    name: string;
-    coins_count: number;
-    data: {
-      market_cap: number;
-    };
+  name: string;
+  coins_count: number;
+  data: {
+    market_cap: number;
   };
 };
 
@@ -123,7 +121,7 @@ export type Asset = {
   name: string;
   symbol: string;
   amount: number;
-  date: string;
+  date?: string;
   image: {
     large: string;
   };

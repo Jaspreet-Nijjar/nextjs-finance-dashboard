@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import { Rubik } from 'next/font/google';
 import './globals.css';
 import Footer from './components/common/Footer';
@@ -13,8 +12,6 @@ export const metadata: Metadata = {
   },
   description: 'Your personal finance dashboard',
 };
-
-const inter = Inter({ subsets: ['latin'] });
 
 const rubik = Rubik({ subsets: ['latin'] });
 

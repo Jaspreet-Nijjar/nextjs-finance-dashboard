@@ -7,8 +7,6 @@ describe('#Logo', () => {
     render(<Logo />);
     expect(screen.getByText('Quick')).toBeInTheDocument();
     expect(screen.getByText(/Finance Manager/i)).toBeInTheDocument();
-
-    const span = screen.getByText('Track');
     expect(screen.getByText('Track')).toBeInTheDocument();
   });
 

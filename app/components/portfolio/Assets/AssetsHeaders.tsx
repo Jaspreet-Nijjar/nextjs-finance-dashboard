@@ -5,7 +5,9 @@ const AssetsHeaders = () => {
   return (
     <div className="grid grid-cols-7 gap-6 p-4 border-b border-gray-200 text-[13px]">
       {ASSET_HEADERS.map((header) => (
-        <p className="font-bold">{header}</p>
+        <p className="font-bold" key={header}>
+          {header}
+        </p>
       ))}
     </div>
   );

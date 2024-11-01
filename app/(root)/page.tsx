@@ -2,7 +2,6 @@ import Watchlist from '@/app/components/portfolio/Watchlist/Watchlist';
 import TopAssets from '../components/dashboard/TopAssets/TopAssets';
 import Balance from '../components/dashboard/Balance/Balance';
 import TrendingCoins from '../components/markets/TrendingCoins/TrendingCoins';
-import PopularCoins from './markets/[coinId]/components/PopularCoins';
 
 export default function Home() {
   return (

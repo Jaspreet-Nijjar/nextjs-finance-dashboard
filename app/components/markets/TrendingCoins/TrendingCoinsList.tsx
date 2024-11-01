@@ -1,7 +1,11 @@
 import { CoinItem } from '@/types/markets';
 import TrendingCoinItem from './TrendingCoinItem';
 
-const TrendingCoinsList = ({ coins }: any) => {
+interface TrendingCoinsListProps {
+  coins: CoinItem[];
+}
+
+const TrendingCoinsList: React.FC<TrendingCoinsListProps> = ({ coins }) => {
   return (
     <div className="flex flex-col">
       <div className="flex justify-between text-orange-500 text-sm font-semibold border-b border-gray-300 pb-2 mb-2">

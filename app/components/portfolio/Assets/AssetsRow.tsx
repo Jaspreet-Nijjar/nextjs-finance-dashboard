@@ -7,7 +7,7 @@ const AssetsRow = ({ assets }: AssetsProps) => {
   return (
     <div className="text-[13px]">
       {assets.map((asset) => (
-        <div className="grid grid-cols-7 gap-6 mb-4">
+        <div className="grid grid-cols-7 gap-6 mb-4" key={asset.id}>
           <div className="flex items-center gap-2">
             <Image
               src={asset.image.large}

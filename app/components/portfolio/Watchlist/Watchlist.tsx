@@ -51,7 +51,10 @@ const Watchlist = () => {
           {hasCoinsInWatchlist && (
             <div className="grid grid-cols-6 gap-10 items-center">
               {WATCHLIST_HEADERS.map((header) => (
-                <p className="text-[14px]  text-gray-600 mb-2 font-bold">
+                <p
+                  className="text-[14px]  text-gray-600 mb-2 font-bold"
+                  key={header}
+                >
                   {header}
                 </p>
               ))}
@@ -123,7 +126,7 @@ const Watchlist = () => {
                 </div>
 
                 <button
-                  onClick={() => removeFromWatchlist(coin.id)}
+                  onClick={() => handleClick(coin.id)}
                   className="text-gray-500 text-[13px] hover:text-orange-400 hover:font-bold transition-all"
                 >
                   Remove

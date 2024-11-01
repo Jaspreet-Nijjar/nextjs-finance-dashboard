@@ -10,8 +10,8 @@ const TrendingCategoriesList = ({ categories }: CategoryProps) => {
         <p className="text-right">Market Cap</p>
       </div>
 
-      {categories.map((category: any) => (
-        <TrendingCategoryItem key={category.id} category={category} />
+      {categories.map((category) => (
+        <TrendingCategoryItem key={category.name} category={category} />
       ))}
     </div>
   );
