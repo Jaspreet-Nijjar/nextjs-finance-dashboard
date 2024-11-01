@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { cn, formatNumber } from '@/lib/utils';
 import millify from 'millify';
 import Indicators from '../../common/Indicators';
+import { CoinProps } from '@/types/markets';
 
-const TopAssetsItem = ({ coin }) => {
+const TopAssetsItem = ({ coin }: { coin: CoinProps }) => {
   return (
     <Card className={cn('mb-4')}>
       <CardContent>
