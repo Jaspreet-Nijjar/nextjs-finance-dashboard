@@ -81,3 +81,6 @@ export const TRANSACTIONS_HEADERS = [
   'Status',
   'Date',
 ];
+
+// Recent Transaction Component
+export const RECENT_TRANSACTIONS_HEADERS = ['Coin', 'Cost', 'Date'];
