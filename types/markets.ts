@@ -115,3 +115,25 @@ export type CoinPerformanceProps = {
     price_change_percentage_1y: number;
   };
 };
+
+export type Asset = {
+  id: string;
+  name: string;
+  symbol: string;
+  amount: number;
+  image: {
+    large: string;
+  };
+  market_data: {
+    current_price: {
+      usd: number;
+    };
+    market_cap?: {
+      usd: number;
+    };
+  };
+};
+
+export type AssetsProps = {
+  assets: Asset[];
+};

@@ -1,8 +1,9 @@
 import { formatNumber } from '@/lib/utils';
+import { AssetsProps } from '@/types/markets';
 import millify from 'millify';
 import Image from 'next/image';
 
-const AssetsRow = ({ assets }) => {
+const AssetsRow = ({ assets }: AssetsProps) => {
   return (
     <div className="text-[13px]">
       {assets.map((asset) => (
@@ -23,7 +24,7 @@ const AssetsRow = ({ assets }) => {
             ${formatNumber(asset.amount * asset.market_data.current_price.usd)}
           </p>
           <p className="text-center">
-            ${millify(asset.market_data.market_cap.usd)}
+            ${millify(asset.market_data?.market_cap?.usd ?? 0)}
           </p>
         </div>
       ))}
