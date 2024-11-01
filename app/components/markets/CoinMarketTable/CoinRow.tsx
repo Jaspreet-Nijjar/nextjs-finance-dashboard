@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Indicators from '../../common/Indicators';
 import millify from 'millify';
 
-const CoinRow = ({ coin }: CoinProps) => {
+const CoinRow = ({ coin }: { coin: CoinProps }) => {
   return (
     <section
       className="text-xs grid grid-cols-3 md:grid-cols-5 lg:grid-cols-11 items-center p-4 border-b border-gray-200"
