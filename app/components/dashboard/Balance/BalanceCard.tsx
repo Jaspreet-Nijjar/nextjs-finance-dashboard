@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const BalanceCard = ({ totalBalance, assets }) => {
   return (
-    <Card className={cn('w-fit')}>
+    <Card className={cn('w-full h-fit')}>
       <CardHeader>
         <CardTitle>Balance</CardTitle>
       </CardHeader>

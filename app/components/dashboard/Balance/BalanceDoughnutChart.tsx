@@ -22,11 +22,12 @@ const BalanceDoughnutChart = ({ assets }) => {
   };
 
   const options = {
-    cutout: 115,
+    cutout: 175,
     responsive: true,
+    maintainAspectRatio: true,
     plugins: {
       legend: {
-        position: 'bottom',
+        position: 'right',
         onClick: null,
       },
     },

@@ -31,7 +31,7 @@ const TopAssetsItem = ({ coin }) => {
             </div>
           </div>
 
-          <div className="mt-4 flex items-center">
+          <div className="mt-4 flex items-center mb-2">
             <p className="text-[13px] text-gray-600">
               Price: ${formatNumber(coin.current_price)}
             </p>
@@ -40,7 +40,7 @@ const TopAssetsItem = ({ coin }) => {
 
           <div className="flex items-center">
             <p className="text-[13px] text-gray-600">
-              Total Market Cap: ${millify(coin.market_cap)}
+              Market Cap: ${millify(coin.market_cap)}
             </p>
             <Indicators data={coin.market_cap_change_percentage_24h} />
           </div>

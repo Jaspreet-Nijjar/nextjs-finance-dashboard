@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 export type CoinStatsCardProps = {
   title: string;
   currency: boolean;
-  data: number;
+  data: number | string;
 };
 
 const CoinStatsCard = ({
@@ -19,7 +19,7 @@ const CoinStatsCard = ({
         <CardContent>
           <p className="text-xs text-center mt-2">{title}</p>
           <p className="text-[15px] text-center font-semibold">
-            {currency ? `$${millify(data)}` : data}
+            {currency && typeof data === 'number' ? `$${millify(data)}` : data}
           </p>
         </CardContent>
       </Card>

@@ -91,8 +91,8 @@ export type PopularCoinProps = {
 export type CoinStatsProps = {
   market_data: {
     circulating_supply: number;
-    total_supply: number | string;
-    max_supply: number | string;
+    total_supply: number;
+    max_supply: number;
     market_cap: {
       usd: number;
     };

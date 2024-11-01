@@ -10,7 +10,6 @@ import {
 } from '../../ui/card';
 import AssetsTable from './AssetsTable';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 
 const Assets = () => {
   const assets = usePortfolioStore((state) => state.assets);

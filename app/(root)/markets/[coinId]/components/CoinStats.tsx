@@ -27,6 +27,7 @@ const CoinStats = ({ coin }: { coin: CoinStatsProps }) => {
         <CoinStatsCard
           title="Circulating Supply"
           data={formatNumber(coin.market_data.circulating_supply)}
+          currency={false}
         />
       </div>
 
@@ -34,10 +35,12 @@ const CoinStats = ({ coin }: { coin: CoinStatsProps }) => {
         <CoinStatsCard
           title="Total Supply"
           data={formatNumber(coin.market_data.total_supply)}
+          currency={false}
         />
         <CoinStatsCard
           title="Max Supply"
           data={formatNumber(coin.market_data.max_supply)}
+          currency={false}
         />
       </div>
     </section>
