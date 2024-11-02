@@ -36,13 +36,25 @@ const SingleCoin = async ({ params }: { params: { coinId: string } }) => {
     <div className="flex flex-col p-4 mt-12 ml-[70px] md:ml-[250px] mb-10">
       <CoinInfo coin={coin} />
       <CoinDescription coin={coin} />
-      <CoinLinks coin={coin} />
-      <CoinStats coin={coin} />
-      <PriceHistoryChart coinMarketData={coinMarketData} />
-      <TrendingCoins />
-      <TrendingCategories />
-      <PopularCoins coins={coins} />
+      <div className="flex justify-between">
+        <div>
+          <CoinStats coin={coin} />
+          <CoinLinks coin={coin} />
+        </div>
+
+        <div className="hidden xl:block">
+          <PriceHistoryChart coinMarketData={coinMarketData} />
+        </div>
+      </div>
+
       <CoinPerformance coin={coin} />
+
+      <div className="flex flex-col lg:flex-row gap-20">
+        <TrendingCoins />
+        <TrendingCategories />
+      </div>
+
+      <PopularCoins coins={coins} />
     </div>
   );
 };

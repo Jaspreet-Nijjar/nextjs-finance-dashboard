@@ -3,7 +3,7 @@ import { CoinPerformanceProps } from '@/types/markets';
 
 const CoinPerformance = ({ coin }: { coin: CoinPerformanceProps }) => {
   return (
-    <section>
+    <section className="mb-4">
       <h1 className="border-b border-gray-300 mb-2 text-xl text-gray-600">
         {coin.name} Price Analysis
       </h1>

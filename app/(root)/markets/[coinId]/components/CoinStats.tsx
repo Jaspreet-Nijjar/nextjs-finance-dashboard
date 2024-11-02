@@ -4,7 +4,7 @@ import { formatNumber } from '@/lib/utils';
 
 const CoinStats = ({ coin }: { coin: CoinStatsProps }) => {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col mt-6">
       <div className="flex gap-2">
         <CoinStatsCard
           title="Market Cap"
