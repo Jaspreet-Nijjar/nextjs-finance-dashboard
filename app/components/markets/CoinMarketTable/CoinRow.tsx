@@ -4,6 +4,9 @@ import Link from 'next/link';
 import Indicators from '../../common/Indicators';
 import millify from 'millify';
 import Image from 'next/image';
+import SparklineChart from './SparklineChart';
+import { Suspense } from 'react';
+import Loader from '../../common/Loader';
 
 const CoinRow = ({ coin }: { coin: CoinProps }) => {
   return (
@@ -74,6 +77,9 @@ const CoinRow = ({ coin }: { coin: CoinProps }) => {
           </div>
         </div>
       </div>
+      <Suspense fallback={<Loader />}>
+        <SparklineChart coin={coin} />
+      </Suspense>
     </section>
   );
 };
