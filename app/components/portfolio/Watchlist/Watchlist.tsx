@@ -12,6 +12,7 @@ import Link from 'next/link';
 
 import WatchlistHeaders from './WatchlistHeaders';
 import WatchlistList from './WatchlistList';
+import ViewCoinsButton from '../../common/ViewCoinsButton';
 
 const Watchlist = () => {
   const watchlist = useWatchlistStore((state) => state.watchlist);
@@ -50,12 +51,7 @@ const Watchlist = () => {
 
           <WatchlistList watchlist={watchlist} handleClick={handleClick} />
 
-          <Link
-            href="/markets"
-            className="border border-gray-300 rounded px-2 py-0.5 text-sm bg-black text-white hover:text-orange-500 transition-all"
-          >
-            View All Coins
-          </Link>
+          <ViewCoinsButton />
         </div>
       </CardContent>
     </Card>
