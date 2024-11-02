@@ -9,8 +9,8 @@ import {
   CardTitle,
 } from '../../ui/card';
 import AssetsTable from './AssetsTable';
-import Link from 'next/link';
 import ViewCoinsButton from '../../common/ViewCoinsButton';
+import { cn } from '@/lib/utils';
 
 const Assets = () => {
   const assets = usePortfolioStore((state) => state.assets);
@@ -18,7 +18,7 @@ const Assets = () => {
   const hasAssets = assets.length > 0;
 
   return (
-    <Card>
+    <Card className={cn('w-full')}>
       <CardHeader>
         <CardTitle>Assets</CardTitle>
         <CardDescription>

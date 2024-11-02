@@ -25,7 +25,7 @@ const Watchlist = () => {
   const hasCoinsInWatchlist = watchlist.length > 0;
 
   return (
-    <Card className={cn('w-full h-fit')}>
+    <Card className={cn('w-full')}>
       <CardHeader>
         <CardTitle>Watchlist</CardTitle>
         <CardDescription>

@@ -9,14 +9,14 @@ import {
   CardTitle,
 } from '../../ui/card';
 import TransactionsTable from './TransactionsTable';
-import Link from 'next/link';
 import ViewCoinsButton from '../../common/ViewCoinsButton';
+import { cn } from '@/lib/utils';
 
 const Transactions = () => {
   const assets = usePortfolioStore((state) => state.assets);
 
   return (
-    <Card>
+    <Card className={cn('w-full h-fit')}>
       <CardHeader>
         <CardTitle>Transactions</CardTitle>
         <CardDescription>
