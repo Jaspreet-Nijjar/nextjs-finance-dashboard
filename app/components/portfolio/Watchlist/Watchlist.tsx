@@ -8,8 +8,6 @@ import {
   CardTitle,
 } from '@/app/components/ui/card';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
-
 import WatchlistHeaders from './WatchlistHeaders';
 import WatchlistList from './WatchlistList';
 import ViewCoinsButton from '../../common/ViewCoinsButton';
