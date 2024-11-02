@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../../ui/card';
 import BalanceDoughnutChart from './BalanceDoughnutChart';
 import Link from 'next/link';
 import { Asset } from '@/types/markets';
+import ViewCoinsButton from '../../common/ViewCoinsButton';
 
 const BalanceCard = ({
   totalBalance,
@@ -28,12 +29,7 @@ const BalanceCard = ({
               <p className="text-gray-600 text-[13px]">
                 You currently do not have any assets.
               </p>
-              <Link
-                href="/markets"
-                className="border border-gray-300 rounded px-2 py-0.5 text-sm bg-black text-white hover:text-orange-500 transition-all"
-              >
-                View All Coins
-              </Link>
+              <ViewCoinsButton />
             </div>
           )}
         </div>

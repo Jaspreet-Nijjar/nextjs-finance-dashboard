@@ -10,6 +10,7 @@ import {
 } from '../../ui/card';
 import TransactionsTable from './TransactionsTable';
 import Link from 'next/link';
+import ViewCoinsButton from '../../common/ViewCoinsButton';
 
 const Transactions = () => {
   const assets = usePortfolioStore((state) => state.assets);
@@ -26,12 +27,7 @@ const Transactions = () => {
               <p className="mb-4">
                 You currently do not have any assets in your portfolio.
               </p>
-              <Link
-                href="/markets"
-                className="rounded px-2 py-0.5 text-sm bg-black text-white hover:text-orange-500 transition-all"
-              >
-                View All Coins
-              </Link>
+              <ViewCoinsButton />
             </div>
           )}
         </CardDescription>
