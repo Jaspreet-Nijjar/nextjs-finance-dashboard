@@ -4,8 +4,15 @@ import React from 'react';
 import Indicators from '../../common/Indicators';
 import { formatNumber } from '@/lib/utils';
 import millify from 'millify';
+import { WatchListCoinsProps } from '@/types/markets';
 
-const WatchlistItem = ({ coin, handleClick }) => {
+const WatchlistItem = ({
+  coin,
+  handleClick,
+}: {
+  coin: WatchListCoinsProps;
+  handleClick: (id: string) => void;
+}) => {
   return (
     <div>
       <li

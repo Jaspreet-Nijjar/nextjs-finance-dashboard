@@ -168,7 +168,7 @@ export type WatchListCoinsProps = {
     current_price: {
       usd: number;
     };
-    price_change_percentage_24hr: number;
+    price_change_percentage_24h: number;
     market_cap: {
       usd: number;
     };
