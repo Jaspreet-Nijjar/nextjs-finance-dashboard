@@ -64,6 +64,14 @@ export const WATCHLIST_HEADERS = [
   'Low 24hr',
 ];
 
+export const WATCHLIST_HEADERS_CLASSES = [
+  'text-[14px] text-gray-600 mb-2 font-bold',
+  'text-[14px] text-gray-600 mb-2 font-bold',
+  'text-[14px] text-gray-600 mb-2 font-bold',
+  'hidden md:block text-[14px] text-gray-600 mb-2 font-bold',
+  'hidden xl:block text-[14px] text-gray-600 mb-2 font-bold',
+];
+
 // Assets Component
 export const ASSET_HEADERS = [
   'Coin',

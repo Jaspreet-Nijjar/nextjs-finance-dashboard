@@ -12,7 +12,7 @@ import { cn, formatNumber } from '@/lib/utils';
 import Link from 'next/link';
 import Indicators from '@/app/components/common/Indicators';
 import millify from 'millify';
-import { WATCHLIST_HEADERS } from '@/constants';
+import { WATCHLIST_HEADERS, WATCHLIST_HEADERS_CLASSES } from '@/constants';
 
 const Watchlist = () => {
   const watchlist = useWatchlistStore((state) => state.watchlist);
@@ -42,18 +42,15 @@ const Watchlist = () => {
       <CardContent>
         <div>
           {!hasCoinsInWatchlist && (
-            <p className="text-[14px]  text-gray-600 mb-4  mt-[-20px]">
+            <p className="text-[14px] text-gray-600 mb-4 mt-[-20px]">
               You currently do not have any coins added to your watchlist.
             </p>
           )}
 
           {hasCoinsInWatchlist && (
-            <div className="grid grid-cols-6 gap-10 items-center">
-              {WATCHLIST_HEADERS.map((header) => (
-                <p
-                  className="text-[14px]  text-gray-600 mb-2 font-bold"
-                  key={header}
-                >
+            <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
+              {WATCHLIST_HEADERS.map((header, index) => (
+                <p className={WATCHLIST_HEADERS_CLASSES[index]} key={header}>
                   {header}
                 </p>
               ))}
@@ -64,7 +61,7 @@ const Watchlist = () => {
             {watchlist.map((coin) => (
               <li
                 key={coin.id}
-                className="grid grid-cols-6 gap-10 mb-6 items-center"
+                className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 mb-6 items-center"
               >
                 <div>
                   <div className="flex items-center gap-2">
@@ -73,13 +70,14 @@ const Watchlist = () => {
                       alt={coin.name}
                       width={30}
                       height={100}
+                      className="hidden lg:block"
                     />
                     <Link
                       href={`/markets/${coin.id}`}
                       className="text-[13px] hover:text-orange-400 transition-all"
                     >
                       {coin.name}
-                      <p className="text-[12px] text-gray-600 uppercase">
+                      <p className="hidden lg:block text-[12px] text-gray-600 uppercase">
                         {coin.symbol}
                       </p>
                     </Link>
@@ -109,7 +107,7 @@ const Watchlist = () => {
                 </div>
 
                 <div>
-                  <div className="flex items-center">
+                  <div className="hidden md:block">
                     <p className="text-[13px]">
                       ${millify(coin.market_data.high_24h.usd)}
                     </p>
@@ -117,16 +115,15 @@ const Watchlist = () => {
                 </div>
 
                 <div>
-                  <div className="flex items-center">
+                  <div className="hidden xl:block">
                     <p className="text-[13px]">
                       ${millify(coin.market_data.low_24h.usd)}
                     </p>
                   </div>
                 </div>
-
                 <button
                   onClick={() => handleClick(coin.id)}
-                  className="text-gray-500 text-[13px] hover:text-orange-400 hover:font-bold transition-all"
+                  className="hidden xl:block text-gray-500 text-[13px] hover:text-orange-400 hover:font-bold transition-all"
                 >
                   Remove
                 </button>

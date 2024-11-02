@@ -8,7 +8,7 @@ interface IndicatorProps {
 
 const Indicators = ({ data, fontSize }: IndicatorProps) => {
   return (
-    <div className={`flex items-center justify-center`}>
+    <div className={clsx('flex items-center justify-center')}>
       {data > 0 ? (
         <>
           <IoMdArrowDropup size={20} className="text-green-500" />
