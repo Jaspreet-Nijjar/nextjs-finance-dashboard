@@ -22,12 +22,6 @@ export const SIDEBAR_LINKS = [
     route: '/portfolio',
     icon: FaChartPie,
   },
-
-  {
-    label: 'News',
-    route: '/news',
-    icon: PiNewspaperLight,
-  },
 ];
 
 // Coin Table
@@ -79,6 +73,14 @@ export const ASSET_HEADERS = [
   'Amount',
   'Price',
   'Market Cap',
+];
+
+export const ASSET_HEADERS_CLASSES = [
+  'font-bold',
+  'hidden font-bold lg:block',
+  'font-bold',
+  'font-bold',
+  'font-bold',
 ];
 
 // Transaction Component

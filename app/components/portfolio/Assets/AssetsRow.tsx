@@ -7,7 +7,10 @@ const AssetsRow = ({ assets }: AssetsProps) => {
   return (
     <div className="text-[13px]">
       {assets.map((asset) => (
-        <div className="grid grid-cols-7 gap-6 mb-4" key={asset.id}>
+        <div
+          className="grid grid-cols-4 items-center lg:grid-cols-5 gap-6 mb-4"
+          key={asset.id}
+        >
           <div className="flex items-center gap-2">
             <Image
               src={asset.image.large}
@@ -18,7 +21,9 @@ const AssetsRow = ({ assets }: AssetsProps) => {
             <p className="text-center">{asset.name}</p>
           </div>
 
-          <p className="uppercase text-center">{asset.symbol}</p>
+          <p className="hidden lg:block uppercase text-center">
+            {asset.symbol}
+          </p>
           <p className="text-center">{asset.amount}</p>
           <p>
             ${formatNumber(asset.amount * asset.market_data.current_price.usd)}
