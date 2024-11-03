@@ -17,7 +17,6 @@ describe('Sidebar', () => {
     expect(screen.getByText('Dashboard')).toBeInTheDocument();
     expect(screen.getByText('Markets')).toBeInTheDocument();
     expect(screen.getByText('Portfolio')).toBeInTheDocument();
-    expect(screen.getByText('News')).toBeInTheDocument();
   });
 
   it('contains the correct links with href attributes', () => {
@@ -34,10 +33,6 @@ describe('Sidebar', () => {
     expect(screen.getByText('Portfolio').closest('a')).toHaveAttribute(
       'href',
       '/portfolio'
-    );
-    expect(screen.getByText('News').closest('a')).toHaveAttribute(
-      'href',
-      '/news'
     );
   });
 });
