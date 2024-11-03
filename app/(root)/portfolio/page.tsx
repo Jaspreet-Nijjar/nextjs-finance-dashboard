@@ -1,3 +1,4 @@
+import Balance from '@/app/components/dashboard/Balance/Balance';
 import Assets from '@/app/components/portfolio/Assets/Assets';
 import PortfolioBarChart from '@/app/components/portfolio/BarChart/PortfolioBarChart';
 import Transactions from '@/app/components/portfolio/Transactions/Transactions';
