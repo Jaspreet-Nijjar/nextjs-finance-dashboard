@@ -11,7 +11,7 @@ export const metadata = {
 
 const Portfolio = () => {
   return (
-    <div className="flex flex-col p-4 mt-12 ml-[70px] md:ml-[250px]">
+    <div className="flex flex-col p-4 mt-12 mb-12 ml-[70px] md:ml-[250px]">
       <div className="flex flex-col lg:flex-row gap-6 mb-4">
         <Assets />
         <Watchlist />
