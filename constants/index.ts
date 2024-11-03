@@ -92,5 +92,13 @@ export const TRANSACTIONS_HEADERS = [
   'Date',
 ];
 
+export const TRANSACTIONS_HEADERS_CLASSES = [
+  'font-bold text-center',
+  'font-bold text-center',
+  'font-bold text-center',
+  'font-bold text-center text-green-600 hidden lg:block',
+  'font-bold text-center',
+];
+
 // Recent Transaction Component
 export const RECENT_TRANSACTIONS_HEADERS = ['Coin', 'Cost', 'Date'];

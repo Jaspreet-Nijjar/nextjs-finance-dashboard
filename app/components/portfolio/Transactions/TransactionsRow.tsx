@@ -9,11 +9,14 @@ const TransactionsRow = ({ assets }: AssetsProps) => {
   return (
     <div className="text-[13px]">
       {assets.map((asset, index) => (
-        <div className="grid grid-cols-5 mb-4 text-center" key={asset.id}>
+        <div
+          className="grid grid-cols-4 lg:grid-cols-5 mb-4 text-center"
+          key={asset.id}
+        >
           <p>{asset.name}</p>
           <p>{asset.amount}</p>
           <p>${formatNumber(cost[index])}</p>
-          <p className="text-green-600">Completed</p>
+          <p className="hidden lg:block">Completed</p>
           <p>{asset.date}</p>
         </div>
       ))}
