@@ -16,7 +16,7 @@ const Transactions = () => {
   const assets = usePortfolioStore((state) => state.assets);
 
   return (
-    <Card className={cn('w-full h-fit')}>
+    <Card className={cn('w-full')}>
       <CardHeader>
         <CardTitle>Transactions</CardTitle>
         <CardDescription>

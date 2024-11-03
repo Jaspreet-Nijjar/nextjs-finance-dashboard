@@ -17,7 +17,7 @@ const WatchlistItem = ({
     <div>
       <li
         key={coin.id}
-        className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 mb-6 items-center"
+        className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 xl:gap-8 mb-6 items-center"
       >
         <div>
           <div className="flex items-center gap-2">
