@@ -44,7 +44,6 @@ const AddToPortfolioForm = () => {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     if (!portfolio) {
-      console.error('Portfolio is not defined');
       return;
     }
 
@@ -64,7 +63,10 @@ const AddToPortfolioForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="p-4 md:px-16 space-y-4 max-w-md mx-auto"
+      >
         <div className="flex gap-2 items-center">
           <Image
             src={portfolio.image.large}

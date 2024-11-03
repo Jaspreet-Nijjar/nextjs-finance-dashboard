@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import {
   Card,
   CardContent,
@@ -9,7 +10,7 @@ import AddToPortfolioForm from './AddToPortfolioForm';
 
 const AddToPortfolioCard = () => {
   return (
-    <Card>
+    <Card className={cn('w-[300px] lg:w-fit')}>
       <CardHeader>
         <CardTitle>Add Coin</CardTitle>
         <CardDescription>Add the coin below to your portfolio</CardDescription>
