@@ -10,7 +10,16 @@ import {
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
-const BarChart = ({ assets }) => {
+interface Asset {
+  name: string;
+  amount: number;
+}
+
+interface BarChartProps {
+  assets: Asset[];
+}
+
+const BarChart = ({ assets }: BarChartProps) => {
   const chartData = {
     labels: assets.map((asset) => asset.name),
     datasets: [
@@ -29,7 +38,7 @@ const BarChart = ({ assets }) => {
     plugins: {
       legend: {
         display: false,
-        position: 'top',
+        position: 'top' as const,
       },
     },
     scales: {
