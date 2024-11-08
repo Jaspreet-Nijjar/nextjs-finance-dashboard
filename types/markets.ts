@@ -86,24 +86,6 @@ export type PopularCoinProps = {
   market_cap_change_percentage_24h: number;
   image: string;
   name: string;
-  symbol?: string;
-  market_cap_rank?: number;
-  market_data?: {
-    price_change_percentage_24h: number;
-    market_cap_change_percentage_24h: number;
-    current_price: {
-      usd: number;
-    };
-    market_cap: {
-      usd: number;
-    };
-    high_24h: {
-      usd: number;
-    };
-    low_24h: {
-      usd: number;
-    };
-  };
 };
 
 export type CoinStatsProps = {

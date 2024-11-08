@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { Card, CardContent } from '../../../../components/ui/card';
 import { cn, formatNumber } from '@/lib/utils';
-import WatchListButton from '@/app/components/common/WatchListButton';
 import Indicators from '@/app/components/common/Indicators';
 import millify from 'millify';
 import { PopularCoinProps } from '@/types/markets';
+import Link from 'next/link';
 
 const PopularCoinCard = ({ coin }: { coin: PopularCoinProps }) => {
   return (
@@ -13,10 +13,14 @@ const PopularCoinCard = ({ coin }: { coin: PopularCoinProps }) => {
         <div>
           <div className="flex justify-between">
             <Image src={coin.image} alt={coin.id} width={40} height={50} />
-            <WatchListButton coin={coin} />
           </div>
 
-          <p className="text-[14px] text-gray-600">{coin.name}</p>
+          <Link
+            href={`/markets/${coin.id}`}
+            className="text-[14px] text-gray-600"
+          >
+            {coin.name}
+          </Link>
 
           <div className="flex items-center">
             <p className="text-[14px]">${formatNumber(coin.current_price)}</p>
