@@ -15,12 +15,18 @@ const TransactionsRow = ({ assets }: AssetsProps) => {
           key={asset.id}
         >
           <div className="flex items-center gap-2">
-            <Image
-              src={asset.image.small}
-              alt={asset.id}
-              width={30}
-              height={50}
-            />
+            {asset.image.small ? (
+              <Image
+                src={asset.image.small}
+                alt={`${asset.name} logo`}
+                width={20}
+                height={20}
+              />
+            ) : (
+              <div className="w-5 h-5 bg-gray-300 flex items-center justify-center text-gray-600">
+                <span className="text-xs">?</span>
+              </div>
+            )}
             <p>{asset.name}</p>
           </div>
 
