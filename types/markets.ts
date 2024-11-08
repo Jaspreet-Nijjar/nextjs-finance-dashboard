@@ -24,6 +24,9 @@ export type CoinProps = {
   price_change_percentage_7d_in_currency: number;
   circulating_supply: number;
   total_supply: number;
+  sparkline_in_7d?: {
+    price: number[];
+  };
 };
 
 export type TopAssetsListProps = {

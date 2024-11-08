@@ -1,7 +1,12 @@
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import { CoinProps } from '@/types/markets';
 
-const SparklineChart = ({ coin }) => {
+interface SparklineChartProps {
+  coin: CoinProps;
+}
+
+const SparklineChart = ({ coin }: SparklineChartProps) => {
   const { sparkline_in_7d } = coin;
 
   if (!sparkline_in_7d) {
