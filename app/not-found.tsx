@@ -16,8 +16,8 @@ export default function NotFound() {
       <h1 className="text-8xl font-extrabold">404</h1>
       <h3 className="text-3xl mt-8 text-gray-600">Page Not Found</h3>
       <p className="text-[14px] text-gray-600 px-2 mt-2 mb-4">
-        Sorry, we can't seem to find this page. The page may not exist or an
-        error has occurred.
+        Sorry, we can&apos;t seem to find this page. The page may not exist or
+        an error has occurred.
       </p>
 
       <MdError size={150} className="text-red-500 mx-auto mb-6" />

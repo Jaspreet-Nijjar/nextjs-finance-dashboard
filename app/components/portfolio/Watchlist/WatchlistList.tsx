@@ -11,7 +11,7 @@ const WatchlistList = ({
   return (
     <ul>
       {watchlist.map((coin) => (
-        <WatchlistItem coin={coin} handleClick={handleClick} />
+        <WatchlistItem coin={coin} key={coin.id} handleClick={handleClick} />
       ))}
     </ul>
   );

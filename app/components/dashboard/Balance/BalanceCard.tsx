@@ -1,7 +1,6 @@
 import { cn, formatNumber } from '@/lib/utils';
 import { Card, CardContent, CardHeader, CardTitle } from '../../ui/card';
 import BalanceDoughnutChart from './BalanceDoughnutChart';
-import Link from 'next/link';
 import { Asset } from '@/types/markets';
 import ViewCoinsButton from '../../common/ViewCoinsButton';
 

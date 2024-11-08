@@ -1,4 +1,3 @@
-import Balance from '@/app/components/dashboard/Balance/Balance';
 import TopAssets from '@/app/components/dashboard/TopAssets/TopAssets';
 import Assets from '@/app/components/portfolio/Assets/Assets';
 import PortfolioBarChart from '@/app/components/portfolio/BarChart/PortfolioBarChart';
