@@ -3,7 +3,14 @@ import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import 'chartjs-adapter-date-fns';
 
-const PriceHistoryChart = ({ coinMarketData }) => {
+interface CoinMarketDataProps {
+  prices: [number, number][];
+}
+const PriceHistoryChart = ({
+  coinMarketData,
+}: {
+  coinMarketData: CoinMarketDataProps;
+}) => {
   const prices = coinMarketData.prices.map((price) => price[1]);
   const timestamps = coinMarketData.prices.map((price) => {
     const date = new Date(price[0]);
